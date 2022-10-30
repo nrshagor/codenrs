@@ -1,0 +1,39 @@
+#hero {
+  background: rgb(226, 221, 221);
+}
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 46vw;
+}
+.heroLeft,
+.heroRight {
+  width: 50%;
+}
+.heroLeft h1 {
+  font-size: 30px;
+  text-align: start;
+  padding-left: 20%;
+}
+.heroLeft p {
+  font-size: 20px;
+  text-align: start;
+  padding-left: 20%;
+}
+.heroRight img {
+  transform: translate(0%, 0%);
+  animation: heroRight 3s infinite;
+  width: 75%;
+}
+@keyframes heroRight {
+  0% {
+    transform: translate(0%, -2%);
+  }
+  50% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(0%, -2%);
+  }
+}
