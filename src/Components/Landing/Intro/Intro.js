@@ -62,11 +62,11 @@ const Intro = () => {
           <ScrollPage>
             <Animator animation={batch(Fade(), Sticky())}>
               <span style={{ fontSize: "30px", color: "white" }}>
-                <NavLink activeClassName="active" to="/home">
+                <a activeClassName="active" href="/home">
                   <button className="btn" type="button" name="button">
                     <h4 class="neon1"> Lets visit CODENRS</h4>
                   </button>
-                </NavLink>
+                </a>
               </span>
             </Animator>
           </ScrollPage>

@@ -1,17 +1,16 @@
 #Product {
-  height: 40vw;
-  display: flex;
+  max-height: 40vw;
 }
 .product {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 46vw;
+  max-height: 46vw;
   justify-content: center;
 }
 
 .productItem {
-  width: 100%;
+  width: 90%;
   display: grid;
   padding: 30px 0px;
   grid-template-columns: repeat(3, 1fr);

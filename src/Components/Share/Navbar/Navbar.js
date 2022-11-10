@@ -3,8 +3,11 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import useSound from "use-sound";
+import boopSfx from "./sound/bubble.mp3";
 AOS.init();
 const Navbar = () => {
+  const [play] = useSound(boopSfx);
   const [clicked, setClicked] = useState(false);
   const handleClick = (e) => {
     if (clicked === true) {
@@ -17,8 +20,8 @@ const Navbar = () => {
   };
   return (
     <div>
-      <div className="navbar" data-aos="zoom-out" data-aos-duration="1500">
-        {/* <div className="navbar"> */}
+      {/* <div className="navbar" data-aos="zoom-out" data-aos-duration="1500"> */}
+      <div className="navbar">
         <div className="nav-logo">
           <h1>CODENRS </h1>
         </div>
@@ -30,11 +33,10 @@ const Navbar = () => {
           <NavLink activeClassName="active" to="/">
             home
           </NavLink>
-
-          <NavLink activeClassName="active" to="/home">
+          <NavLink onClick={play} activeClassName="active" to="/home">
             home
           </NavLink>
-          <NavLink activeClassName="active" to="/services">
+          <NavLink onClick={play} activeClassName="active" to="/services">
             Services
           </NavLink>
           <NavLink activeClassName="active" to="/g">

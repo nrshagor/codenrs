@@ -1,6 +1,9 @@
 #footer {
   width: 100%;
 }
+.ps-0 {
+  padding-left: 0px;
+}
 .footer {
   position: relative;
   width: 100%;
@@ -14,7 +17,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 .footer .container .sec {
   margin-right: 30px;
