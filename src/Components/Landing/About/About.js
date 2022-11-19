@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import about from "../../Image/Hero/heroLeft.svg";
+import about from "../../Image/Hero/heroLeft.png";
 const About = () => {
   return (
     <section>

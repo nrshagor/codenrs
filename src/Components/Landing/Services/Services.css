@@ -1,13 +1,12 @@
 #Services {
-  min-height: 40vw;
-  display: flex;
+  height: 100%;
 }
 .services {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 46vw;
   justify-content: center;
+  padding: 100px 0px;
 }
 
 .servicesItem {
@@ -27,10 +26,20 @@
   align-items: center;
   font-family: "Poppins", sans-serif;
   flex-direction: column;
-  box-shadow: 1px 1px 10px 2px rgb(0 0 0 / 49%);
+  border-radius: 18px;
+  background: linear-gradient(225deg, #e9fff9, #f8fff9);
+  box-shadow: -1px 1px 4px #c8c8c8, 6px -6px 12px #ffffff;
   transition: all 0.9s ease;
   padding: 20px 10px 0px 10px;
   border-radius: 10px;
+  background-position: 50%;
+}
+.servicesCard:hover {
+  background: linear-gradient(225deg, #f8fff9, #e9fff9);
+  box-shadow: -6px 6px 12px #c8c8c8, 6px -6px 12px #ffffff;
+}
+.servicesCardImg img {
+  width: 100%;
 }
 .servicesCardInfo h1 {
   font-size: 20px;

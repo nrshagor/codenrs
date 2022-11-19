@@ -1,5 +1,9 @@
 import React from "react";
 import "./Product.css";
+import school from "../../Image/Services/school.png";
+import pos from "../../Image/Services/pos.jpg";
+import document from "../../Image/Services/document.png";
+
 const Product = () => {
   return (
     <section id="Product">
@@ -8,44 +12,26 @@ const Product = () => {
         <div className="productItem">
           <div className="productCard">
             <div className="productCardImg">
-              <i class="fa-solid fa-message"></i>
+              <img src={school} alt="" />
             </div>
             <div className="productCardInfo">
               <h1>School Management System</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
           <div className="productCard">
             <div className="productCardImg">
-              <i class="fa-solid fa-desktop"></i>
+              <img src={pos} alt="" />
             </div>
             <div className="productCardInfo">
               <h1>Store Management System</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
           <div className="productCard">
             <div className="productCardImg">
-              <i class="fa-solid fa-desktop"></i>
+              <img src={document} alt="" />
             </div>
             <div className="productCardInfo">
               <h1>Document Maker</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
         </div>

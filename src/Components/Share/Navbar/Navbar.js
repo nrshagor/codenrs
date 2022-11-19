@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import useSound from "use-sound";
 import boopSfx from "./sound/bubble.mp3";
+import { Link } from "react-scroll";
 AOS.init();
 const Navbar = () => {
   const [play] = useSound(boopSfx);
@@ -30,21 +31,73 @@ const Navbar = () => {
           <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
         </div>
         <div className={clicked ? "navList1 active" : "navList1"}>
-          <NavLink activeClassName="active" to="/">
+          <Link
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={play}
+            activeClassName="active"
+            to="hero"
+          >
             home
-          </NavLink>
-          <NavLink onClick={play} activeClassName="active" to="/home">
-            home
-          </NavLink>
-          <NavLink onClick={play} activeClassName="active" to="/services">
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={play}
+            activeClassName="active"
+            to="Services"
+          >
             Services
-          </NavLink>
-          <NavLink activeClassName="active" to="/g">
-            home
-          </NavLink>
-          <NavLink activeClassName="active" to="/home">
-            home
-          </NavLink>
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={play}
+            activeClassName="active"
+            to="Product"
+          >
+            Product
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={play}
+            activeClassName="active"
+            to="About"
+          >
+            About
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={play}
+            activeClassName="active"
+            to="Blog"
+          >
+            Blog
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={play}
+            activeClassName="active"
+            to="contact"
+          >
+            Contact
+          </Link>
+
           <div class="animation start-home"></div>
         </div>
       </div>

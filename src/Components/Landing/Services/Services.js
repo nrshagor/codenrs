@@ -1,5 +1,13 @@
 import React from "react";
-import Navbar from "../../Share/Navbar/Navbar";
+import seo from "../../Image/Services/seom.png";
+import digital from "../../Image/Services/digital1.png";
+import app from "../../Image/Services/mobileapp.png";
+import wordpress from "../../Image/Services/wpress.png";
+import shopify from "../../Image/Services/shopify.png";
+import business from "../../Image/Services/business.png";
+import portfolio from "../../Image/Services/portfolio1.png";
+import businessmanagment from "../../Image/Services/businessmanagment.png";
+import ecommarce from "../../Image/Services/ecommarce.png";
 import "./Services.css";
 const Services = () => {
   return (
@@ -9,129 +17,75 @@ const Services = () => {
         <div className="servicesItem">
           <div className="servicesCard">
             <div className="servicesCardImg">
-              <i class="fa-solid fa-message"></i>
+              <img src={seo} alt="" />
             </div>
             <div className="servicesCardInfo">
               <h1> SEO Optimization</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
           <div className="servicesCard">
             <div className="servicesCardImg">
-              <i class="fa-solid fa-desktop"></i>
+              <img src={digital} alt="" />
             </div>
             <div className="servicesCardInfo">
               <h1>Digital Marketing</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
 
           <div className="servicesCard">
             <div className="servicesCardImg">
-              <i class="fa-solid fa-code"></i>
+              <img src={app} alt="" />
             </div>
             <div className="servicesCardInfo">
               <h1>Mobile Apps Development</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
           <div className="servicesCard">
             <div className="servicesCardImg">
-              <i class="fa-solid fa-code"></i>
+              <img src={wordpress} alt="" />
             </div>
             <div className="servicesCardInfo">
               <h1>Wordpress Development </h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
           <div className="servicesCard">
             <div className="servicesCardImg">
-              <i class="fa-solid fa-code"></i>
+              <img src={shopify} alt="" />
             </div>
             <div className="servicesCardInfo">
               <h1>Shopify Store Design </h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
           <div className="servicesCard">
             <div className="servicesCardImg">
-              <i class="fa-solid fa-code"></i>
+              <img src={business} alt="" />
             </div>
             <div className="servicesCardInfo">
               <h1>Profesional Business Website</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
           <div className="servicesCard">
             <div className="servicesCardImg">
-              <i class="fa-solid fa-code"></i>
+              <img src={portfolio} alt="" />
             </div>
             <div className="servicesCardInfo">
               <h1>Protfolio Website </h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
           <div className="servicesCard">
             <div className="servicesCardImg">
-              <i class="fa-solid fa-code"></i>
+              <img src={businessmanagment} alt="" />
             </div>
             <div className="servicesCardInfo">
               <h1>Business Management Software </h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
           <div className="servicesCard">
             <div className="servicesCardImg">
-              <i class="fa-solid fa-code"></i>
+              <img src={ecommarce} alt="" />
             </div>
             <div className="servicesCardInfo">
               <h1>E-commers Website </h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque animi consequatur porro, quasi numquam cupiditate!
-                Debitis sunt delectus repellendus vel cumque nesciunt incidunt
-                modi, at, in distinctio sit quisquam quibusdam.
-              </p>
             </div>
           </div>
         </div>
