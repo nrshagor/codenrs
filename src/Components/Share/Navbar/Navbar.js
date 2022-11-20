@@ -75,17 +75,7 @@ const Navbar = () => {
           >
             About
           </Link>
-          <Link
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            onClick={play}
-            activeClassName="active"
-            to="Blog"
-          >
-            Blog
-          </Link>
+
           <Link
             spy={true}
             smooth={true}

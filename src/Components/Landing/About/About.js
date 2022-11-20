@@ -16,9 +16,20 @@ const About = () => {
             <div className="aboutRight">
               <h1>Who We Are</h1>
               <p>
-                Lorem ipsum dolor sit amet, con se ctetur adipiscing elit. In
-                sagittis eg esta ante, sed viverra nunc tinci dunt nec elei fend
-                et tiram.
+                CODENRS is a premier provider of software development and
+                testing services. Having talented software engineers on board,
+                we craft compelling web, desktop, and mobile applications for
+                our clients.
+              </p>
+              <p>
+                Our main focus is to deliver high-quality and scalable custom
+                and new applications. We focus our diligent coding abilities and
+                integrate the latest development trends, and best practices
+                available in the industry to create plugins that help
+                individuals or companies with eCommerce, Project Management, and
+                Enterprise Solutions. We love simplicity and intuitiveness, so
+                all of our products are user-centric and designed to be Front
+                End friendly.
               </p>
             </div>
           </div>
