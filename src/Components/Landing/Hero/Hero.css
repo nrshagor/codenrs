@@ -2,6 +2,7 @@
   background: rgb(240 250 255);
   height: 100%;
   width: 100%;
+  font-family: "Signika Negative", sans-serif;
 }
 .hero {
   display: flex;

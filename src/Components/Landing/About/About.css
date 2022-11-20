@@ -1,5 +1,6 @@
 #About {
   height: 100%;
+  font-family: "Signika Negative", sans-serif;
 }
 .about {
   display: flex;
@@ -15,11 +16,48 @@
 .aboutLeft {
   width: 50%;
 }
+.aboutLeft img {
+  width: 70%;
+}
 .aboutRight {
+  padding: 40px 10px;
   width: 40%;
+  text-align: justify;
+}
+.aboutRight h1 {
+  padding: 40px 0px 10px;
+  font-size: 26px;
 }
 .aboutTitle h1 {
   font-size: 40px;
   color: rgb(58, 58, 58);
   font-weight: 700;
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .aboutItem {
+    flex-direction: column;
+  }
+  .about {
+    padding: 100px 0px 0px;
+  }
+  .aboutLeft,
+  .aboutRight {
+    padding: 50px;
+    width: 85%;
+  }
+  .aboutRight h1 {
+    padding: 0px 0px 10px;
+  }
+}
+/* Mobile */
+@media (max-width: 767px) {
+  .aboutItem {
+    flex-direction: column;
+  }
+  .aboutLeft,
+  .aboutRight {
+    width: 85%;
+    padding: 0px 30px 13px;
+  }
 }

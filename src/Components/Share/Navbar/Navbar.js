@@ -20,11 +20,15 @@ const Navbar = () => {
     e.preventDefault();
   };
   return (
-    <div>
+    <>
       {/* <div className="navbar" data-aos="zoom-out" data-aos-duration="1500"> */}
       <div className="navbar">
         <div className="nav-logo">
-          <h1>CODENRS </h1>
+          <h1>
+            <span className="cod">COD</span>
+            <span className="e">E</span>
+            <span className="nrs">NRS</span>
+          </h1>
         </div>
 
         <div className="menuIcon" onClick={handleClick}>
@@ -91,7 +95,7 @@ const Navbar = () => {
           <div class="animation start-home"></div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

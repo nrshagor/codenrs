@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import "./Footer.css";
 const Footer = () => {
   const date = new Date().getFullYear();
@@ -42,13 +43,90 @@ const Footer = () => {
             <h2>Quick Link</h2>
             <ul className="ps-0">
               <li>
-                <NavLink to="/h">Home</NavLink>
+                <Link
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  activeClassName="active"
+                  to="hero"
+                  style={{
+                    color: "white",
+                    background: "#00000000",
+                    boxShadow: "0 0 0 0 #00000000",
+                  }}
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <NavLink to="/about">About</NavLink>
+                <Link
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  activeClassName="active"
+                  to="Services"
+                  style={{
+                    color: "white",
+                    background: "#00000000",
+                    boxShadow: "0 0 0 0 #00000000",
+                  }}
+                >
+                  Services
+                </Link>
               </li>
               <li>
-                <NavLink to="/projects">Projects</NavLink>
+                <Link
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  activeClassName="active"
+                  to="Product"
+                  style={{
+                    color: "white",
+                    background: "#00000000",
+                    boxShadow: "0 0 0 0 #00000000",
+                  }}
+                >
+                  Product
+                </Link>
+              </li>
+              <li>
+                <Link
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  activeClassName="active"
+                  to="About"
+                  style={{
+                    color: "white",
+                    background: "#00000000",
+                    boxShadow: "0 0 0 0 #00000000",
+                  }}
+                >
+                  About
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  activeClassName="active"
+                  to="contact"
+                  style={{
+                    color: "white",
+                    background: "#00000000",
+                    boxShadow: "0 0 0 0 #00000000",
+                  }}
+                >
+                  Contact
+                </Link>
               </li>
               <li>
                 <a href="#">
@@ -64,7 +142,7 @@ const Footer = () => {
                 <span>
                   <i className="fas fa-map-signs"></i>
                 </span>
-                <span>585/1 Modhubag Moghbazar</span>
+                <span>585/1 Modhubag Moghbazar Dhaka</span>
               </li>
               <li>
                 <span>
@@ -79,7 +157,9 @@ const Footer = () => {
                   <i className="fas fa-envelope-open-text"></i>
                 </span>
                 <p>
-                  <a href="mailto:noorerabbishagor.com">noorerabbishagor.com</a>
+                  <a href="mailto:noorerabbishagor@gmail.com">
+                    noorerabbishagor@gmail.com
+                  </a>
                 </p>
               </li>
             </ul>
