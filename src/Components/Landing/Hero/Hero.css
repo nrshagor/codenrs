@@ -1,5 +1,5 @@
 #hero {
-  background: rgb(240 250 255);
+  background: rgb(20 0 38);
   height: 100%;
   width: 100%;
   font-family: "Signika Negative", sans-serif;
@@ -8,21 +8,24 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 60px 0px;
+  padding: 80px 0px;
 }
 .heroLeft,
 .heroRight {
   width: 50%;
 }
 .heroLeft h1 {
-  font-size: 30px;
+  font-size: 40px;
   text-align: start;
   padding-left: 20%;
+  color: rgb(255, 255, 255);
+  margin-bottom: 30px;
 }
 .heroLeft p {
   font-size: 20px;
   text-align: start;
   padding-left: 20%;
+  color: rgb(255, 255, 255);
 }
 .heroRight img {
   transform: translate(0%, 0%);

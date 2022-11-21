@@ -1,6 +1,10 @@
 * {
   margin: 0;
+
   /* font-family: "Rubik", sans-serif; */
+}
+body {
+  overflow-x: hidden;
 }
 .App {
   text-align: center;
@@ -41,18 +45,19 @@
   }
 }
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 0px;
 }
+/* 
 ::-webkit-scrollbar-track:hover {
-  background: linear-gradient(#cdf1fc, #c8e5f7);
+  background: linear-gradient(#3832c3, #b1b1b1);
 }
 ::-webkit-scrollbar-track {
-  background: linear-gradient(#b4f5ba, #ceffc0);
+  background: linear-gradient(#3832c3, #b1b1b1);
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#e6ffa2, #30ff00);
+  background: linear-gradient(#3832c3, #b1b1b1);
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(transparent, #0077ff);
-}
+} */

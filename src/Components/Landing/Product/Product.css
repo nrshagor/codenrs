@@ -31,7 +31,7 @@
 .productCard {
   padding: 0 0 10px;
   margin: 20px;
-  height: 400px;
+  height: 380px;
   align-items: center;
   font-family: "Poppins", sans-serif;
   flex-direction: column;
@@ -41,10 +41,12 @@
   border-radius: 10px;
 }
 .productCardInfo h1 {
+  font-family: "Signika Negative", sans-serif;
   font-size: 20px;
   padding: 10px 0px;
 }
 .productCardInfo p {
+  font-family: "Signika Negative", sans-serif;
   font-size: 16px;
   text-align: justify;
   padding: 10px 10px 20px 10px;

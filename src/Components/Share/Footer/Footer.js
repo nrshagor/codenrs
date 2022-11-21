@@ -9,32 +9,24 @@ const Footer = () => {
       <div className="footer">
         <div className="container">
           <div className="sec aboutus">
-            <h2>About myself</h2>
-            <p> Hello dear. I am N R Shagor. A web developer</p>
+            <h2>About Ourself</h2>
+            <p>
+              CODENRS is a premier provider of software development and testing
+              services. Having talented software engineers on board, we craft
+              compelling web, desktop, and mobile applications for our clients.
+            </p>
             <ul className="ps-0 sci">
               <li>
-                <a href="https://www.facebook.com/nrshagor" target="_blank">
+                <a href="https://www.facebook.com/C0DENRS" target="_blank">
                   <i className="fab fa-facebook"></i>
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/nrshagor/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/company/codenrs/"
+                  target="_blank"
+                >
                   <i class="fab fa-linkedin"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/nrshagor" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/nrshagor" target="_blank">
-                  <i className="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/c/NRSHAGOR" target="_blank">
-                  <i class="fab fa-youtube"></i>
                 </a>
               </li>
             </ul>
@@ -157,9 +149,7 @@ const Footer = () => {
                   <i className="fas fa-envelope-open-text"></i>
                 </span>
                 <p>
-                  <a href="mailto:noorerabbishagor@gmail.com">
-                    noorerabbishagor@gmail.com
-                  </a>
+                  <a href="mailto:info@codenrs.com">info@codenrs.com</a>
                 </p>
               </li>
             </ul>

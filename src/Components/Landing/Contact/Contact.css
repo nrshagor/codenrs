@@ -18,7 +18,7 @@
   background-size: cover;
 }
 .icon i.fas {
-  color: rgb(255, 14, 14);
+  color: rgb(0, 0, 0);
   padding: 0px;
 }
 .contacts .content {
@@ -26,6 +26,7 @@
   text-align: center;
 }
 .contacts .content h2 {
+  font-family: "Signika Negative", sans-serif;
   font-size: 36px;
   font-weight: 500;
   color: rgb(0, 0, 0);
@@ -63,7 +64,7 @@
 .contact-container .contactInfo .box .text {
   display: flex;
   margin-left: 20px;
-
+  font-family: "Signika Negative", sans-serif;
   color: rgb(0, 0, 0);
   flex-direction: column;
   font-weight: 300;
@@ -71,13 +72,22 @@
 }
 .contact-container .contactInfo .box .text h3 {
   font-weight: 500;
-  color: #00bcd4;
+  color: #000000;
   font-size: 16px;
+  font-family: "Signika Negative", sans-serif;
 }
-.contact-container .contactInfo .box .text h3 {
-  font-weight: 500;
-  color: #00bcd4;
+.contact-container .contactInfo .box .text p {
+  font-weight: 100;
+  color: #000000;
   font-size: 16px;
+  font-family: "Signika Negative", sans-serif;
+}
+.contact-container .contactInfo .box .text a {
+  font-weight: 100;
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Signika Negative", sans-serif;
 }
 .contactForm {
   width: 40%;
@@ -85,6 +95,7 @@
   background: #fff;
 }
 .contactForm h2 {
+  font-family: "Signika Negative", sans-serif;
   font-size: 30px;
   color: #333;
   font-weight: 500;
@@ -105,6 +116,7 @@
   border-bottom: 2px solid #333;
   outline: none;
   resize: none;
+  font-family: "Signika Negative", sans-serif;
 }
 .contactForm .inputBox span {
   position: absolute;
@@ -115,6 +127,7 @@
   pointer-events: none;
   transition: 0.5s;
   color: #666;
+  font-family: "Signika Negative", sans-serif;
 }
 .contactForm .inputBox input:focus ~ span,
 .contactForm .inputBox input:valid ~ span,
@@ -126,12 +139,13 @@
 }
 .contactForm .inputBox input[type="submit"] {
   width: 100px;
-  background: #00bcd4;
+  background: #000000;
   border: none;
   color: #fff;
   cursor: pointer;
   padding: 10px;
   font-size: 18px;
+  font-family: "Signika Negative", sans-serif;
 }
 @media screen and (max-width: 1023px) {
   .contacts {

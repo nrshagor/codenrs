@@ -33,7 +33,9 @@ const Contact = () => {
               </div>
               <div className="text">
                 <h3>Email</h3>
-                <p>noorerabbishagor@gmail.com</p>
+                <p>
+                  <a href="mailto:info@codenrs.com">info@codenrs.com</a>
+                </p>
               </div>
             </div>
           </div>
@@ -60,7 +62,7 @@ const Contact = () => {
                 <span>Type your message...</span>
               </div>
               <div className="inputBox">
-                <input type="submit" name="" value="send" />
+                <input type="submit" name="" value="Send" />
               </div>
             </form>
           </div>

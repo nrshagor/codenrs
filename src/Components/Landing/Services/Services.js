@@ -8,14 +8,21 @@ import business from "../../Image/Services/business.png";
 import portfolio from "../../Image/Services/portfolio1.png";
 import businessmanagment from "../../Image/Services/businessmanagment.png";
 import ecommarce from "../../Image/Services/ecommarce.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Services.css";
+AOS.init();
 const Services = () => {
   return (
     <section id="Services">
       <div className="services">
         <div className="servicesTitle">Our Services</div>
         <div className="servicesItem">
-          <div className="servicesCard">
+          <div
+            className="servicesCard"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          >
             <div className="servicesCardImg">
               <img src={seo} alt="" />
             </div>
@@ -23,7 +30,11 @@ const Services = () => {
               <h1> SEO Optimization</h1>
             </div>
           </div>
-          <div className="servicesCard">
+          <div
+            className="servicesCard"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          >
             <div className="servicesCardImg">
               <img src={digital} alt="" />
             </div>
@@ -32,7 +43,11 @@ const Services = () => {
             </div>
           </div>
 
-          <div className="servicesCard">
+          <div
+            className="servicesCard"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          >
             <div className="servicesCardImg">
               <img src={app} alt="" />
             </div>
@@ -40,7 +55,11 @@ const Services = () => {
               <h1>Mobile Apps Development</h1>
             </div>
           </div>
-          <div className="servicesCard">
+          <div
+            className="servicesCard"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          >
             <div className="servicesCardImg">
               <img src={wordpress} alt="" />
             </div>
@@ -48,7 +67,11 @@ const Services = () => {
               <h1>Wordpress Development </h1>
             </div>
           </div>
-          <div className="servicesCard">
+          <div
+            className="servicesCard"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          >
             <div className="servicesCardImg">
               <img src={shopify} alt="" />
             </div>
@@ -56,7 +79,11 @@ const Services = () => {
               <h1>Shopify Store Design </h1>
             </div>
           </div>
-          <div className="servicesCard">
+          <div
+            className="servicesCard"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          >
             <div className="servicesCardImg">
               <img src={business} alt="" />
             </div>
@@ -64,7 +91,11 @@ const Services = () => {
               <h1>Profesional Business Website</h1>
             </div>
           </div>
-          <div className="servicesCard">
+          <div
+            className="servicesCard"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          >
             <div className="servicesCardImg">
               <img src={portfolio} alt="" />
             </div>
@@ -72,7 +103,11 @@ const Services = () => {
               <h1>Protfolio Website </h1>
             </div>
           </div>
-          <div className="servicesCard">
+          <div
+            className="servicesCard"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          >
             <div className="servicesCardImg">
               <img src={businessmanagment} alt="" />
             </div>
@@ -80,7 +115,11 @@ const Services = () => {
               <h1>Business Management Software </h1>
             </div>
           </div>
-          <div className="servicesCard">
+          <div
+            className="servicesCard"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          >
             <div className="servicesCardImg">
               <img src={ecommarce} alt="" />
             </div>
