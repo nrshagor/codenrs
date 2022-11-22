@@ -15,14 +15,14 @@
   width: 50%;
 }
 .heroLeft h1 {
-  font-size: 40px;
+  font-size: 45px;
   text-align: start;
   padding-left: 20%;
   color: rgb(255, 255, 255);
   margin-bottom: 30px;
 }
 .heroLeft p {
-  font-size: 20px;
+  font-size: 25px;
   text-align: start;
   padding-left: 20%;
   color: rgb(255, 255, 255);
@@ -53,6 +53,17 @@
   }
   .heroLeft,
   .heroRight {
+    margin-top: 30px;
     width: 100%;
+  }
+  .heroLeft h1 {
+    padding-left: 5%;
+    font-size: 25px;
+  }
+  .heroLeft p {
+    padding-left: 5%;
+    font-size: 18px;
+    width: 80%;
+    text-align: justify;
   }
 }

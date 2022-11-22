@@ -158,7 +158,7 @@ const Footer = () => {
       </div>
       <div className="copyright">
         <p>
-          Copyright &copy; 2021-{date}{" "}
+          Copyright &copy; 22-11-22 to {date}{" "}
           <a href="https://nrshagor.com/" target="_blank">
             {" "}
             N R SHAGOR{" "}
