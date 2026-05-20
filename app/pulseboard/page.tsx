@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   LayoutDashboard,
   CheckCircle2,
+  Store,
 } from "lucide-react";
 
 const features = [
@@ -48,7 +49,6 @@ const planFeatures = [
 export default function PulseBoardLandingPage() {
   return (
     <main className="min-h-screen bg-background pt-28">
-      {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,245,212,0.12),transparent_45%)]" />
 
@@ -80,6 +80,14 @@ export default function PulseBoardLandingPage() {
               </Link>
 
               <Link
+                href="/pulseboard/marketplace"
+                className="inline-flex items-center gap-2 rounded-full border border-[#00F5D4]/40 px-8 py-4 text-sm font-semibold text-[#00F5D4] hover:bg-[#00F5D4]/10 transition-colors"
+              >
+                Marketplace Package
+                <Store className="w-4 h-4" />
+              </Link>
+
+              <Link
                 href="/pulseboard/support"
                 className="inline-flex items-center gap-2 rounded-full border border-border px-8 py-4 text-sm font-semibold hover:border-[#00F5D4] hover:text-[#00F5D4] transition-colors"
               >
@@ -90,7 +98,6 @@ export default function PulseBoardLandingPage() {
         </div>
       </section>
 
-      {/* Features */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10 lg:py-16">
         <div className="mb-12">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#00F5D4]">
@@ -122,7 +129,6 @@ export default function PulseBoardLandingPage() {
         </div>
       </section>
 
-      {/* Pricing */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10 lg:py-16">
         <div className="rounded-[32px] border border-border bg-card/70 backdrop-blur-xl p-8 lg:p-12">
           <div className="max-w-3xl">
@@ -141,7 +147,6 @@ export default function PulseBoardLandingPage() {
           </div>
 
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            {/* Free */}
             <div className="rounded-3xl border border-border bg-background/60 p-8">
               <div className="flex items-center justify-between gap-4">
                 <div>
@@ -170,7 +175,6 @@ export default function PulseBoardLandingPage() {
               </div>
             </div>
 
-            {/* Pro */}
             <div className="relative overflow-hidden rounded-3xl border border-[#00F5D4]/30 bg-[#00F5D4]/5 p-8">
               <div className="absolute top-4 right-4 rounded-full bg-[#00F5D4] px-3 py-1 text-xs font-semibold text-[#0D0D0D]">
                 Recommended
@@ -180,7 +184,7 @@ export default function PulseBoardLandingPage() {
                 <h3 className="text-2xl font-bold">Pro</h3>
 
                 <div className="mt-4 flex items-end gap-2">
-                  <span className="text-5xl font-bold">$15</span>
+                  <span className="text-5xl font-bold">$9</span>
                   <span className="pb-1 text-muted-foreground">/ month</span>
                 </div>
 
@@ -209,7 +213,6 @@ export default function PulseBoardLandingPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
       <section className="max-w-7xl mx-auto px-6 lg:px-8 py-10 lg:py-20">
         <div className="rounded-[32px] border border-border bg-card/70 backdrop-blur-xl p-10 lg:p-16 text-center">
           <h2 className="text-3xl lg:text-5xl font-bold tracking-tight text-balance">
@@ -227,6 +230,13 @@ export default function PulseBoardLandingPage() {
               className="inline-flex items-center rounded-full bg-[#00F5D4] px-8 py-4 text-sm font-semibold text-[#0D0D0D]"
             >
               Read Documentation
+            </Link>
+
+            <Link
+              href="/pulseboard/marketplace"
+              className="inline-flex items-center rounded-full border border-[#00F5D4]/40 px-8 py-4 text-sm font-semibold text-[#00F5D4] hover:bg-[#00F5D4]/10 transition-colors"
+            >
+              Marketplace Package
             </Link>
 
             <Link
