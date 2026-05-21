@@ -5,6 +5,8 @@ import {
   ShieldCheck,
   CreditCard,
   Scale,
+  Database,
+  ExternalLink,
 } from "lucide-react";
 
 const usageRules = [
@@ -22,26 +24,26 @@ const limitationItems = [
 export default function PulseBoardTermsPage() {
   return (
     <main className="min-h-screen bg-background pt-28">
-      <section className="max-w-5xl mx-auto px-6 lg:px-8 pb-20">
+      <section className="mx-auto max-w-5xl px-6 pb-20 lg:px-8">
         <Link
           href="/pulseboard"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-[#00F5D4] transition-colors mb-8"
+          className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-[#00F5D4]"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="h-4 w-4" />
           Back to PulseBoard
         </Link>
 
-        <div className="rounded-3xl border border-border bg-card/70 backdrop-blur-xl p-8 lg:p-12 shadow-sm">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#00F5D4]/30 bg-[#00F5D4]/10 px-4 py-2 text-sm font-medium text-[#00F5D4] mb-6">
-            <FileText className="w-4 h-4" />
+        <div className="rounded-3xl border border-border bg-card/70 p-8 shadow-sm backdrop-blur-xl lg:p-12">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#00F5D4]/30 bg-[#00F5D4]/10 px-4 py-2 text-sm font-medium text-[#00F5D4]">
+            <FileText className="h-4 w-4" />
             Terms of Service
           </div>
 
-          <h1 className="text-4xl lg:text-6xl font-bold tracking-tight text-balance mb-6">
+          <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight lg:text-6xl">
             PulseBoard Terms of Service
           </h1>
 
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+          <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">
             These Terms of Service govern the use of PulseBoard, a Jira
             Marketplace application developed by CodeNRS.
           </p>
@@ -53,12 +55,23 @@ export default function PulseBoardTermsPage() {
 
         <div className="mt-10 grid gap-6">
           <TermsSection
-            icon={<ShieldCheck className="w-5 h-5" />}
+            icon={<ShieldCheck className="h-5 w-5" />}
             title="Acceptance of terms"
           >
             <p>
-              By installing or using PulseBoard, you agree to these Terms of
-              Service and any applicable Atlassian Marketplace policies.
+              By installing, accessing, or using PulseBoard, you agree to these
+              Terms of Service and any applicable Atlassian Marketplace
+              policies. If you do not agree to these terms, do not install or
+              use PulseBoard.
+            </p>
+          </TermsSection>
+
+          <TermsSection title="About PulseBoard">
+            <p>
+              PulseBoard is a Jira Marketplace app that provides dashboard
+              insights, Jira analytics, workload visibility, sprint health
+              tracking, and developer-focused activity views using data
+              available from your Jira workspace.
             </p>
           </TermsSection>
 
@@ -76,22 +89,47 @@ export default function PulseBoardTermsPage() {
           </TermsSection>
 
           <TermsSection
-            icon={<CreditCard className="w-5 h-5" />}
+            icon={<Database className="h-5 w-5" />}
+            title="Data usage and privacy"
+          >
+            <p>
+              PulseBoard uses Jira workspace data only to provide dashboard,
+              analytics, workload planning, and productivity features inside
+              Jira. CodeNRS does not sell customer Jira data.
+            </p>
+
+            <p>
+              Data handling, storage, and privacy practices are described in the{" "}
+              <Link
+                href="/pulseboard/privacy"
+                className="inline-flex items-center gap-1 font-medium text-[#00F5D4] hover:underline"
+              >
+                PulseBoard Privacy Policy
+                <ExternalLink className="h-3.5 w-3.5" />
+              </Link>
+              .
+            </p>
+          </TermsSection>
+
+          <TermsSection
+            icon={<CreditCard className="h-5 w-5" />}
             title="Subscriptions and billing"
           >
             <p>
               PulseBoard subscriptions, renewals, trials, cancellations, and
-              billing are managed through Atlassian Marketplace. Access to
-              premium features may change depending on Marketplace license
-              status.
+              billing are managed through Atlassian Marketplace where
+              applicable. Access to premium features may change depending on
+              Marketplace license status.
             </p>
           </TermsSection>
 
           <TermsSection title="Availability">
             <p>
-              CodeNRS will make reasonable efforts to maintain service
-              availability and compatibility with supported Jira environments.
-              However, uninterrupted availability cannot be guaranteed.
+              CodeNRS will make reasonable efforts to maintain PulseBoard
+              availability and compatibility with supported Jira Cloud
+              environments. However, uninterrupted or error-free service cannot
+              be guaranteed because PulseBoard depends on Atlassian services,
+              Jira APIs, browser environments, and workspace configuration.
             </p>
           </TermsSection>
 
@@ -104,7 +142,7 @@ export default function PulseBoardTermsPage() {
           </TermsSection>
 
           <TermsSection
-            icon={<Scale className="w-5 h-5" />}
+            icon={<Scale className="h-5 w-5" />}
             title="Limitation of liability"
           >
             <ul className="space-y-3">
@@ -123,7 +161,15 @@ export default function PulseBoardTermsPage() {
             <p>
               Access to PulseBoard may end if the Jira app is uninstalled, if
               Marketplace licensing becomes inactive, or if usage violates these
-              terms or Atlassian policies.
+              terms, Atlassian policies, or applicable laws.
+            </p>
+          </TermsSection>
+
+          <TermsSection title="Changes to these terms">
+            <p>
+              CodeNRS may update these Terms of Service from time to time.
+              Continued use of PulseBoard after updates means you accept the
+              updated terms.
             </p>
           </TermsSection>
 
@@ -135,7 +181,14 @@ export default function PulseBoardTermsPage() {
                 className="font-medium text-[#00F5D4] hover:underline"
               >
                 noorerabbishagor@gmail.com
-              </a>
+              </a>{" "}
+              or visit the{" "}
+              <Link
+                href="/pulseboard/support"
+                className="font-medium text-[#00F5D4] hover:underline"
+              >
+                PulseBoard support page
+              </Link>
               .
             </p>
           </TermsSection>
@@ -155,8 +208,8 @@ function TermsSection({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-3xl border border-border bg-card/70 backdrop-blur-xl p-6 lg:p-8">
-      <div className="flex items-center gap-3 mb-4">
+    <section className="rounded-3xl border border-border bg-card/70 p-6 backdrop-blur-xl lg:p-8">
+      <div className="mb-4 flex items-center gap-3">
         {icon ? (
           <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[#00F5D4]/10 text-[#00F5D4]">
             {icon}
@@ -166,7 +219,7 @@ function TermsSection({
         <h2 className="text-2xl font-bold">{title}</h2>
       </div>
 
-      <div className="text-muted-foreground leading-relaxed space-y-4">
+      <div className="space-y-4 leading-relaxed text-muted-foreground">
         {children}
       </div>
     </section>
