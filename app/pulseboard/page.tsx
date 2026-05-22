@@ -245,6 +245,19 @@ export default function PulseBoardLandingPage() {
             >
               Privacy Policy
             </Link>
+            <Link
+              href="/pulseboard/security"
+              className="inline-flex items-center rounded-full border border-border px-8 py-4 text-sm font-semibold hover:border-[#00F5D4] hover:text-[#00F5D4] transition-colors"
+            >
+              Security Policy
+            </Link>
+
+            <Link
+              href="/pulseboard/terms"
+              className="inline-flex items-center rounded-full border border-border px-8 py-4 text-sm font-semibold hover:border-[#00F5D4] hover:text-[#00F5D4] transition-colors"
+            >
+              Terms of Service
+            </Link>
           </div>
         </div>
       </section>
