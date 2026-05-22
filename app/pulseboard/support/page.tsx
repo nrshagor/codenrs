@@ -32,7 +32,7 @@ const supportItems = [
     icon: <Mail className="w-5 h-5" />,
     title: "Support Email",
     description: "For technical help, Marketplace questions, or bug reports.",
-    value: "noorerabbishagor@gmail.com",
+    value: "support@codenrs.com",
   },
   {
     icon: <Clock3 className="w-5 h-5" />,

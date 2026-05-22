@@ -177,10 +177,10 @@ export default function PulseBoardTermsPage() {
             <p>
               For legal or support inquiries, contact CodeNRS at{" "}
               <a
-                href="mailto:noorerabbishagor@gmail.com"
+                href="mailto:support@codenrs.com"
                 className="font-medium text-[#00F5D4] hover:underline"
               >
-                noorerabbishagor@gmail.com
+                support@codenrs.com
               </a>{" "}
               or visit the{" "}
               <Link

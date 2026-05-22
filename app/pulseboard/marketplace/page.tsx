@@ -77,7 +77,7 @@ const marketplaceDetails = [
   },
   {
     label: "Support",
-    value: "noorerabbishagor@gmail.com",
+    value: "support@codenrs.com",
   },
 ];
 

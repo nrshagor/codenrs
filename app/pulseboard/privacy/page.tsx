@@ -126,10 +126,10 @@ export default function PulseBoardPrivacyPage() {
             <p>
               For privacy questions or support requests, contact CodeNRS at{" "}
               <a
-                href="mailto:noorerabbishagor@gmail.com"
+                href="mailto:support@codenrs.com"
                 className="font-medium text-[#00F5D4] hover:underline"
               >
-                noorerabbishagor@gmail.com
+                support@codenrs.com
               </a>
               .
             </p>
