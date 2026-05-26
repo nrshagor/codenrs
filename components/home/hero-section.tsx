@@ -110,17 +110,17 @@ export function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
         <div className="text-center">
           {/* Badge */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F5D4]/10 border border-[#00F5D4]/20 mb-8"
           >
-            {/* <span className="w-2 h-2 rounded-full bg-[#00F5D4] animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#00F5D4] animate-pulse" />
             <span className="text-sm font-medium dark:text-[#00F5D4] text-[#007568]">
               Now accepting new projects for Q2 2026
-            </span> */}
-          </motion.div>
+            </span>
+          </motion.div> */}
 
           {/* Headline */}
           <motion.h1
