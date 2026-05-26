@@ -116,10 +116,10 @@ export function HeroSection() {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00F5D4]/10 border border-[#00F5D4]/20 mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-[#00F5D4] animate-pulse" />
+            {/* <span className="w-2 h-2 rounded-full bg-[#00F5D4] animate-pulse" />
             <span className="text-sm font-medium dark:text-[#00F5D4] text-[#007568]">
               Now accepting new projects for Q2 2026
-            </span>
+            </span> */}
           </motion.div>
 
           {/* Headline */}
