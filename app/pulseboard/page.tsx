@@ -9,7 +9,8 @@ import {
   CheckCircle2,
   Store,
 } from "lucide-react";
-
+const marketplaceUrl =
+  "https://marketplace.atlassian.com/apps/4157437872/pulseboard";
 const features = [
   {
     icon: <LayoutDashboard className="w-6 h-6" />,
@@ -230,6 +231,14 @@ export default function PulseBoardLandingPage() {
               className="inline-flex items-center rounded-full bg-[#00F5D4] px-8 py-4 text-sm font-semibold text-[#0D0D0D]"
             >
               Read Documentation
+            </Link>
+
+            <Link
+              href={marketplaceUrl}
+              target="_blank"
+              className="inline-flex items-center rounded-full bg-blue-400 px-8 py-4 text-sm font-semibold text-[#0D0D0D]"
+            >
+              View Marketplace App
             </Link>
 
             <Link
