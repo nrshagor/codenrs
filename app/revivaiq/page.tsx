@@ -108,7 +108,7 @@ export default function RevivaIQLandingPage() {
 
             <div className="relative rounded-[32px] border border-border bg-card/70 p-4 backdrop-blur-xl">
               <Image
-                src="/images/revivaiq/basic/dashboard-overview.png"
+                src="/images/revivaiq/basic/banner.png"
                 alt="RevivaIQ Base Odoo dashboard overview"
                 width={1500}
                 height={1000}
