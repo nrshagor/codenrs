@@ -20,7 +20,7 @@ const features = [
   },
   {
     icon: <Camera className="w-6 h-6" />,
-    title: "Gemini Vision Receipt Scan",
+    title: "Vision Receipt Scan",
     description:
       "Snap a picture of any receipt. Our integrated Gemini 2.5 Flash AI instantly extracts amount, category, and notes.",
   },
@@ -47,7 +47,7 @@ const planFeatures = [
   "Excel & PDF Data Export",
 ];
 
-export default function SnapCountAILandingPage() {
+export default function PocketLeansLandingPage() {
   return (
     <main className="min-h-screen bg-[#0A0F1E] text-white pt-28">
       {/* Hero Section */}
@@ -56,11 +56,6 @@ export default function SnapCountAILandingPage() {
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#1A56DB]/30 bg-[#1A56DB]/10 px-4 py-2 text-sm font-medium text-[#1A56DB] mb-8">
-              <ShieldCheck className="w-4 h-4" />
-              Powered by Gemini 2.5 Flash AI
-            </div>
-
             <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-[1.05] text-balance">
               Personal finance tracking
               <span className="block text-[#1A56DB]">
@@ -76,7 +71,7 @@ export default function SnapCountAILandingPage() {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                href="/snapcount/docs"
+                href="/pocket-leans/docs"
                 className="inline-flex items-center gap-2 rounded-full bg-[#1A56DB] px-8 py-4 text-sm font-semibold text-white hover:shadow-[0_0_30px_rgba(26,86,219,0.35)] transition-all"
               >
                 View Documentation
@@ -84,7 +79,7 @@ export default function SnapCountAILandingPage() {
               </Link>
 
               <Link
-                href="/snapcount/download"
+                href="/pocket-leans/download"
                 className="inline-flex items-center gap-2 rounded-full border border-[#1A56DB]/40 px-8 py-4 text-sm font-semibold text-[#1A56DB] hover:bg-[#1A56DB]/10 transition-colors"
               >
                 Download APK / Bundle
@@ -92,7 +87,7 @@ export default function SnapCountAILandingPage() {
               </Link>
 
               <Link
-                href="/snapcount/support"
+                href="/pocket-leans/support"
                 className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-8 py-4 text-sm font-semibold hover:border-[#1A56DB] hover:text-[#1A56DB] transition-colors"
               >
                 Contact Support
@@ -195,7 +190,7 @@ export default function SnapCountAILandingPage() {
                 <h3 className="text-2xl font-bold">Pro Monthly</h3>
 
                 <div className="mt-4 flex items-end gap-2">
-                  <span className="text-5xl font-bold">৳১০০</span>
+                  <span className="text-5xl font-bold">$2.99</span>
                   <span className="pb-1 text-slate-400">/ month</span>
                 </div>
 
@@ -241,28 +236,28 @@ export default function SnapCountAILandingPage() {
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
-              href="/snapcount/docs"
+              href="/pocket-leans/docs"
               className="inline-flex items-center rounded-full bg-[#1A56DB] px-8 py-4 text-sm font-semibold text-white"
             >
               Read Documentation
             </Link>
 
             <Link
-              href="/snapcount/privacy"
+              href="/pocket-leans/privacy"
               className="inline-flex items-center rounded-full border border-slate-700 px-8 py-4 text-sm font-semibold hover:border-[#1A56DB] hover:text-[#1A56DB] transition-colors"
             >
               Privacy Policy
             </Link>
 
             <Link
-              href="/snapcount/security"
+              href="/pocket-leans/security"
               className="inline-flex items-center rounded-full border border-slate-700 px-8 py-4 text-sm font-semibold hover:border-[#1A56DB] hover:text-[#1A56DB] transition-colors"
             >
               Security Policy
             </Link>
 
             <Link
-              href="/snapcount/terms"
+              href="/pocket-leans/terms"
               className="inline-flex items-center rounded-full border border-slate-700 px-8 py-4 text-sm font-semibold hover:border-[#1A56DB] hover:text-[#1A56DB] transition-colors"
             >
               Terms of Service
