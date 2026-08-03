@@ -71,7 +71,7 @@ export default function PocketLeansLandingPage() {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                href="/pocket-leans/docs"
+                href="/pocket-lens/docs"
                 className="inline-flex items-center gap-2 rounded-full bg-[#1A56DB] px-8 py-4 text-sm font-semibold text-white hover:shadow-[0_0_30px_rgba(26,86,219,0.35)] transition-all"
               >
                 View Documentation
@@ -79,7 +79,7 @@ export default function PocketLeansLandingPage() {
               </Link>
 
               <Link
-                href="/pocket-leans/download"
+                href="/pocket-lens/download"
                 className="inline-flex items-center gap-2 rounded-full border border-[#1A56DB]/40 px-8 py-4 text-sm font-semibold text-[#1A56DB] hover:bg-[#1A56DB]/10 transition-colors"
               >
                 Download APK / Bundle
@@ -87,7 +87,7 @@ export default function PocketLeansLandingPage() {
               </Link>
 
               <Link
-                href="/pocket-leans/support"
+                href="/pocket-lens/support"
                 className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-8 py-4 text-sm font-semibold hover:border-[#1A56DB] hover:text-[#1A56DB] transition-colors"
               >
                 Contact Support
@@ -236,28 +236,28 @@ export default function PocketLeansLandingPage() {
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
-              href="/pocket-leans/docs"
+              href="/pocket-lens/docs"
               className="inline-flex items-center rounded-full bg-[#1A56DB] px-8 py-4 text-sm font-semibold text-white"
             >
               Read Documentation
             </Link>
 
             <Link
-              href="/pocket-leans/privacy"
+              href="/pocket-lens/privacy"
               className="inline-flex items-center rounded-full border border-slate-700 px-8 py-4 text-sm font-semibold hover:border-[#1A56DB] hover:text-[#1A56DB] transition-colors"
             >
               Privacy Policy
             </Link>
 
             <Link
-              href="/pocket-leans/security"
+              href="/pocket-lens/security"
               className="inline-flex items-center rounded-full border border-slate-700 px-8 py-4 text-sm font-semibold hover:border-[#1A56DB] hover:text-[#1A56DB] transition-colors"
             >
               Security Policy
             </Link>
 
             <Link
-              href="/pocket-leans/terms"
+              href="/pocket-lens/terms"
               className="inline-flex items-center rounded-full border border-slate-700 px-8 py-4 text-sm font-semibold hover:border-[#1A56DB] hover:text-[#1A56DB] transition-colors"
             >
               Terms of Service
