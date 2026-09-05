@@ -18,7 +18,7 @@ const products = [
     title: "PocketLens",
     badge: "AI Mobile App",
     badgeColor: "from-emerald-500/20 to-teal-500/10 text-emerald-400 border-emerald-500/30",
-    icon: <Smartphone className="w-6 h-6 text-[#00F5D4]" />,
+    icon: <Smartphone className="w-6 h-6 text-[#00D2FF]" />,
     tagline: "Personal Finance & Smart AI Tracking",
     description:
       "Intelligent personal expense and budget management app with Gemini 2.5 Flash vision receipt scanning, natural Bangla/Banglish voice input, and real-time glassmorphic financial insights.",
@@ -29,8 +29,8 @@ const products = [
       "Offline-First Isar Database",
     ],
     href: "/pocket-lens",
-    accent: "#00F5D4",
-    imageGradient: "linear-gradient(135deg, #0A0F1E 0%, #10243E 50%, #00F5D4 100%)",
+    accent: "#00D2FF",
+    imageGradient: "linear-gradient(135deg, #0A0F1E 0%, #10243E 50%, #00D2FF 100%)",
   },
   {
     id: "pulseboard",
@@ -76,7 +76,7 @@ export function ProductsSection() {
   return (
     <section className="py-24 lg:py-32 relative overflow-hidden bg-card/30 border-t border-border/50">
       {/* Glow Backdrop */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00F5D4]/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00D2FF]/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -88,7 +88,7 @@ export function ProductsSection() {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
         >
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 text-xs font-semibold text-[#00F5D4] uppercase tracking-widest mb-3">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold text-[#00D2FF] uppercase tracking-widest mb-3">
               <Sparkles className="w-4 h-4" />
               Our Proprietary Products
             </span>
@@ -112,7 +112,7 @@ export function ProductsSection() {
               transition={{ duration: 0.6, delay: index * 0.15 }}
             >
               <Link href={product.href} className="group block h-full">
-                <div className="relative h-full flex flex-col justify-between rounded-3xl overflow-hidden bg-card border border-border/80 hover:border-[#00F5D4]/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,245,212,0.12)]">
+                <div className="relative h-full flex flex-col justify-between rounded-3xl overflow-hidden bg-card border border-border/80 hover:border-[#00D2FF]/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,210,255,0.15)]">
                   {/* Visual Banner */}
                   <div
                     className="h-44 relative p-6 flex flex-col justify-between overflow-hidden"
@@ -127,7 +127,7 @@ export function ProductsSection() {
                         <ShieldCheck className="w-3.5 h-3.5" />
                         {product.badge}
                       </span>
-                      <div className="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-[#00F5D4] group-hover:text-black transition-all duration-300">
+                      <div className="w-10 h-10 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-[#00D2FF] group-hover:text-black transition-all duration-300">
                         <ArrowUpRight className="w-5 h-5" />
                       </div>
                     </div>
@@ -156,7 +156,7 @@ export function ProductsSection() {
                             key={feat}
                             className="flex items-center gap-2.5 text-xs text-foreground/90 font-medium"
                           >
-                            <CheckCircle2 className="w-4 h-4 text-[#00F5D4] shrink-0" />
+                            <CheckCircle2 className="w-4 h-4 text-[#00D2FF] shrink-0" />
                             <span>{feat}</span>
                           </div>
                         ))}
@@ -164,7 +164,7 @@ export function ProductsSection() {
                     </div>
 
                     {/* Action Button */}
-                    <div className="pt-4 border-t border-border/60 flex items-center justify-between text-sm font-semibold text-[#00F5D4] group-hover:text-white transition-colors">
+                    <div className="pt-4 border-t border-border/60 flex items-center justify-between text-sm font-semibold text-[#00D2FF] group-hover:text-white transition-colors">
                       <span>Explore {product.title} Details</span>
                       <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </div>

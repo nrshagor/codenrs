@@ -207,8 +207,8 @@ export default function ServicesPage() {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#00F5D4]/5 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00F5D4]/5 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#00D2FF]/5 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -217,7 +217,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
               Our Services
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
@@ -249,14 +249,14 @@ export default function ServicesPage() {
               {/* Service Header */}
               <motion.div variants={itemVariants} className="mb-16">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#00F5D4]/10">
-                    <service.icon className="w-8 h-8 text-[#00F5D4]" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#00D2FF]/10">
+                    <service.icon className="w-8 h-8 text-[#00D2FF]" />
                   </div>
                   <div>
                     <h2 className="text-3xl md:text-4xl font-bold">
                       {service.title}
                     </h2>
-                    <p className="text-[#00F5D4] font-medium">
+                    <p className="text-[#00D2FF] font-medium">
                       {service.tagline}
                     </p>
                   </div>
@@ -274,10 +274,10 @@ export default function ServicesPage() {
                 {service.benefits.map((benefit) => (
                   <div
                     key={benefit.title}
-                    className="p-6 rounded-2xl bg-card border border-border hover:border-[#00F5D4]/30 transition-colors group"
+                    className="p-6 rounded-2xl bg-card border border-border hover:border-[#00D2FF]/30 transition-colors group"
                   >
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#00F5D4]/10 mb-4 group-hover:bg-[#00F5D4]/20 transition-colors">
-                      <benefit.icon className="w-6 h-6 text-[#00F5D4]" />
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#00D2FF]/10 mb-4 group-hover:bg-[#00D2FF]/20 transition-colors">
+                      <benefit.icon className="w-6 h-6 text-[#00D2FF]" />
                     </div>
                     <h3 className="text-lg font-semibold mb-2">
                       {benefit.title}
@@ -305,7 +305,7 @@ export default function ServicesPage() {
                         key={capability}
                         className="flex items-center gap-3 text-sm"
                       >
-                        <Check className="w-4 h-4 text-[#00F5D4] shrink-0" />
+                        <Check className="w-4 h-4 text-[#00D2FF] shrink-0" />
                         <span className="text-muted-foreground">
                           {capability}
                         </span>
@@ -319,7 +319,7 @@ export default function ServicesPage() {
                   <div className="grid grid-cols-3 gap-8">
                     {service.stats.map((stat) => (
                       <div key={stat.label} className="text-center">
-                        <div className="text-3xl md:text-4xl font-bold text-[#00F5D4] mb-2">
+                        <div className="text-3xl md:text-4xl font-bold text-[#00D2FF] mb-2">
                           {stat.value}
                         </div>
                         <div className="text-xs text-muted-foreground uppercase tracking-wider">
@@ -336,7 +336,7 @@ export default function ServicesPage() {
       ))}
 
       {/* CTA Section */}
-      <section className="py-24 lg:py-32 bg-gradient-to-b from-background to-[#00F5D4]/5">
+      <section className="py-24 lg:py-32 bg-gradient-to-b from-background to-[#00D2FF]/5">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -354,7 +354,7 @@ export default function ServicesPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00F5D4] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_30px_rgba(0,245,212,0.4)] transition-all duration-300"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

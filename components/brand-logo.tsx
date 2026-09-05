@@ -3,18 +3,18 @@ import Image from "next/image";
 interface BrandLogoProps {
   className?: string;
   iconSize?: number;
-  textSize?: string;
+  imageHeight?: string;
   showIcon?: boolean;
 }
 
 export function BrandLogo({
   className = "",
-  iconSize = 38,
-  textSize = "text-2xl md:text-[26px]",
+  iconSize = 30,
+  imageHeight = "h-5.5 md:h-6",
   showIcon = true,
 }: BrandLogoProps) {
   return (
-    <div className={`flex items-center gap-2.5 select-none ${className}`}>
+    <div className={`flex items-center gap-2 select-none ${className}`}>
       {showIcon && (
         <div
           className="relative shrink-0 flex items-center justify-center"
@@ -30,23 +30,23 @@ export function BrandLogo({
           />
         </div>
       )}
-      <div className="relative h-7 md:h-8 w-auto flex items-center">
+      <div className={`relative ${imageHeight} w-auto flex items-center`}>
         {/* Dark Mode Wordmark (CODE is White) */}
         <Image
           src="/wordmark-dark.png"
           alt="CODENRS"
-          width={180}
-          height={32}
-          className="hidden dark:block h-7 md:h-8 w-auto object-contain"
+          width={150}
+          height={26}
+          className={`hidden dark:block ${imageHeight} w-auto object-contain`}
           priority
         />
         {/* Light Mode Wordmark (CODE is Deep Slate/Black #0F172A) */}
         <Image
           src="/wordmark-light.png"
           alt="CODENRS"
-          width={180}
-          height={32}
-          className="block dark:hidden h-7 md:h-8 w-auto object-contain"
+          width={150}
+          height={26}
+          className={`block dark:hidden ${imageHeight} w-auto object-contain`}
           priority
         />
       </div>

@@ -97,11 +97,11 @@ export function CustomCursor() {
           transition={{ duration: 0.2, ease: "easeOut" }}
         >
           <div 
-            className="w-10 h-10 rounded-full border border-[#00F5D4]/50"
+            className="w-10 h-10 rounded-full border border-[#00D2FF]/50"
             style={{
               boxShadow: isHovering 
-                ? '0 0 20px rgba(0, 245, 212, 0.4), inset 0 0 10px rgba(0, 245, 212, 0.1)'
-                : '0 0 10px rgba(0, 245, 212, 0.2)'
+                ? '0 0 20px rgba(0, 210, 255, 0.45), inset 0 0 10px rgba(0, 210, 255, 0.15)'
+                : '0 0 10px rgba(0, 210, 255, 0.25)'
             }}
           />
         </motion.div>
@@ -124,9 +124,9 @@ export function CustomCursor() {
           transition={{ duration: 0.15, ease: "easeOut" }}
         >
           <div 
-            className="w-2 h-2 rounded-full bg-[#00F5D4]"
+            className="w-2 h-2 rounded-full bg-[#00D2FF]"
             style={{
-              boxShadow: '0 0 10px rgba(0, 245, 212, 0.8)'
+              boxShadow: '0 0 12px rgba(0, 210, 255, 0.85)'
             }}
           />
         </motion.div>

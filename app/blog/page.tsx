@@ -107,8 +107,8 @@ export default function BlogPage() {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#00F5D4]/5 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00F5D4]/5 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#00D2FF]/5 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -117,7 +117,7 @@ export default function BlogPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
               Insights & Ideas
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
@@ -144,8 +144,8 @@ export default function BlogPage() {
                 key={category}
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   category === "All"
-                    ? "bg-[#00F5D4] text-[#0D0D0D]"
-                    : "bg-card border border-border hover:border-[#00F5D4]/50 text-muted-foreground hover:text-foreground"
+                    ? "bg-[#00D2FF] text-[#0D0D0D]"
+                    : "bg-card border border-border hover:border-[#00D2FF]/50 text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {category}
@@ -165,7 +165,7 @@ export default function BlogPage() {
             transition={{ duration: 0.6 }}
           >
             <Link href={featuredPost.href} className="group block">
-              <div className="grid lg:grid-cols-2 gap-8 items-center rounded-2xl bg-card border border-border hover:border-[#00F5D4]/30 transition-all duration-500 overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-8 items-center rounded-2xl bg-card border border-border hover:border-[#00D2FF]/30 transition-all duration-500 overflow-hidden">
                 {/* Image */}
                 <div
                   className="h-64 lg:h-96 relative"
@@ -175,7 +175,7 @@ export default function BlogPage() {
                     <span className="text-9xl font-bold text-white/5">01</span>
                   </div>
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-[#00F5D4] text-[#0D0D0D] text-xs font-semibold rounded-full">
+                    <span className="px-3 py-1 bg-[#00D2FF] text-[#0D0D0D] text-xs font-semibold rounded-full">
                       Featured
                     </span>
                   </div>
@@ -183,11 +183,11 @@ export default function BlogPage() {
 
                 {/* Content */}
                 <div className="p-8 lg:pr-12">
-                  <span className="inline-block text-xs font-medium text-[#00F5D4] uppercase tracking-wider mb-4">
+                  <span className="inline-block text-xs font-medium text-[#00D2FF] uppercase tracking-wider mb-4">
                     {featuredPost.category}
                   </span>
 
-                  <h2 className="text-2xl lg:text-3xl font-bold mb-4 group-hover:text-[#00F5D4] transition-colors text-balance">
+                  <h2 className="text-2xl lg:text-3xl font-bold mb-4 group-hover:text-[#00D2FF] transition-colors text-balance">
                     {featuredPost.title}
                   </h2>
 
@@ -207,7 +207,7 @@ export default function BlogPage() {
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00F5D4]/20 to-[#00F5D4]/5" />
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00D2FF]/20 to-[#00D2FF]/5" />
                     <span className="font-medium">{featuredPost.author}</span>
                   </div>
                 </div>
@@ -242,7 +242,7 @@ export default function BlogPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Link href={post.href} className="group block h-full">
-                  <div className="h-full rounded-2xl overflow-hidden bg-card border border-border hover:border-[#00F5D4]/30 transition-all duration-500">
+                  <div className="h-full rounded-2xl overflow-hidden bg-card border border-border hover:border-[#00D2FF]/30 transition-all duration-500">
                     {/* Image */}
                     <div
                       className="h-48 relative"
@@ -257,12 +257,12 @@ export default function BlogPage() {
 
                     {/* Content */}
                     <div className="p-6">
-                      <span className="inline-block text-xs font-medium text-[#00F5D4] uppercase tracking-wider mb-3">
+                      <span className="inline-block text-xs font-medium text-[#00D2FF] uppercase tracking-wider mb-3">
                         {post.category}
                       </span>
 
                       <div className="flex items-start justify-between gap-3 mb-3">
-                        <h3 className="font-bold group-hover:text-[#00F5D4] transition-colors leading-snug">
+                        <h3 className="font-bold group-hover:text-[#00D2FF] transition-colors leading-snug">
                           {post.title}
                         </h3>
                         <ArrowUpRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 -translate-y-1 translate-x-1 group-hover:translate-y-0 group-hover:translate-x-0 transition-all shrink-0 mt-1" />
@@ -296,7 +296,7 @@ export default function BlogPage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border border-border hover:border-[#00F5D4]/50 rounded-full font-medium transition-all duration-300"
+              className="px-8 py-3 border border-border hover:border-[#00D2FF]/50 rounded-full font-medium transition-all duration-300"
             >
               Load More Articles
             </motion.button>
@@ -324,13 +324,13 @@ export default function BlogPage() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full px-6 py-4 rounded-full bg-card border border-border focus:border-[#00F5D4] focus:outline-none focus:ring-2 focus:ring-[#00F5D4]/20 transition-all"
+                className="w-full px-6 py-4 rounded-full bg-card border border-border focus:border-[#00D2FF] focus:outline-none focus:ring-2 focus:ring-[#00D2FF]/20 transition-all"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="w-full sm:w-auto px-8 py-4 bg-[#00F5D4] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_30px_rgba(0,245,212,0.4)] transition-all duration-300 whitespace-nowrap"
+                className="w-full sm:w-auto px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300 whitespace-nowrap"
               >
                 Subscribe
               </motion.button>

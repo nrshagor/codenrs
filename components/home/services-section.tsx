@@ -93,7 +93,7 @@ export function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
+          <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
             What We Do
           </span>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-balance">
@@ -119,16 +119,16 @@ export function ServicesSection() {
               className="group relative"
             >
               <Link href={service.href}>
-                <div className="relative h-full p-8 rounded-2xl bg-card border border-border hover:border-[#00F5D4]/30 transition-all duration-500 overflow-hidden">
+                <div className="relative h-full p-8 rounded-2xl bg-card border border-border hover:border-[#00D2FF]/30 transition-all duration-500 overflow-hidden">
                   {/* Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#00F5D4]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="dark:block hidden absolute inset-0 group-hover:shadow-[inset_0_0_30px_rgba(0,245,212,0.05)] transition-shadow duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#00D2FF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="dark:block hidden absolute inset-0 group-hover:shadow-[inset_0_0_30px_rgba(0,210,255,0.05)] transition-shadow duration-500" />
 
                   {/* Content */}
                   <div className="relative z-10">
                     {/* Icon */}
-                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#00F5D4]/10 mb-6 group-hover:bg-[#00F5D4]/20 transition-colors">
-                      <service.icon className="w-7 h-7 text-[#00F5D4]" />
+                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#00D2FF]/10 mb-6 group-hover:bg-[#00D2FF]/20 transition-colors">
+                      <service.icon className="w-7 h-7 text-[#00D2FF]" />
                     </div>
 
                     {/* Title & Arrow */}
@@ -149,7 +149,7 @@ export function ServicesSection() {
                           key={feature}
                           className="flex items-center gap-2 text-sm text-muted-foreground"
                         >
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#00F5D4]" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#00D2FF]" />
                           {feature}
                         </li>
                       ))}
@@ -171,7 +171,7 @@ export function ServicesSection() {
         >
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-[#00F5D4] font-medium hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-[#00D2FF] font-medium hover:gap-3 transition-all"
           >
             Explore All Services
             <ArrowUpRight className="w-4 h-4" />

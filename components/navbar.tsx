@@ -55,7 +55,7 @@ export function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <BrandLogo iconSize={38} textSize="text-2xl md:text-[26px]" />
+              <BrandLogo iconSize={30} imageHeight="h-5.5 md:h-6" />
             </motion.div>
           </Link>
 
@@ -66,14 +66,14 @@ export function Navbar() {
                 <span
                   className={`text-sm font-medium transition-colors duration-200 ${
                     pathname === link.href
-                      ? "text-[#00F5D4]"
+                      ? "text-[#00D2FF]"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   {link.label}
                 </span>
                 <motion.div
-                  className="absolute -bottom-1 left-0 h-0.5 bg-[#00F5D4]"
+                  className="absolute -bottom-1 left-0 h-0.5 bg-[#00D2FF]"
                   initial={{ width: pathname === link.href ? "100%" : 0 }}
                   animate={{ width: pathname === link.href ? "100%" : 0 }}
                   whileHover={{ width: "100%" }}
@@ -91,7 +91,7 @@ export function Navbar() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-full bg-secondary hover:bg-[#00F5D4]/10 transition-colors"
+                className="p-2 rounded-full bg-secondary hover:bg-[#00D2FF]/10 transition-colors"
                 aria-label="Toggle theme"
               >
                 <AnimatePresence mode="wait">
@@ -103,7 +103,7 @@ export function Navbar() {
                       exit={{ rotate: 90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <Sun className="w-5 h-5 text-[#00F5D4]" />
+                      <Sun className="w-5 h-5 text-[#00D2FF]" />
                     </motion.div>
                   ) : (
                     <motion.div
@@ -125,7 +125,7 @@ export function Navbar() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-2.5 bg-[#00F5D4] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_20px_rgba(0,245,212,0.4)] transition-shadow duration-300"
+                className="px-6 py-2.5 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all duration-300"
               >
                 Start Project
               </motion.button>
@@ -170,7 +170,7 @@ export function Navbar() {
                     href={link.href}
                     className={`block py-2 text-lg font-medium transition-colors ${
                       pathname === link.href
-                        ? "text-[#00F5D4]"
+                        ? "text-[#00D2FF]"
                         : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
@@ -185,7 +185,7 @@ export function Navbar() {
               >
                 <Link
                   href="/contact"
-                  className="inline-block mt-4 px-6 py-3 bg-[#00F5D4] text-[#0D0D0D] font-semibold rounded-full text-center w-full"
+                  className="inline-block mt-4 px-6 py-3 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full text-center w-full hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all duration-300"
                 >
                   Start Project
                 </Link>

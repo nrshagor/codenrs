@@ -46,7 +46,7 @@ export function Footer() {
         >
           <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-balance">
             Ready to transform your
-            <span className="text-[#00F5D4]"> digital presence</span>?
+            <span className="text-[#00D2FF]"> digital presence</span>?
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
             Let&apos;s collaborate to build something extraordinary. Our team is
@@ -56,7 +56,7 @@ export function Footer() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#00F5D4] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_30px_rgba(0,245,212,0.4)] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300"
             >
               Start Your Project
               <ArrowUpRight className="w-5 h-5" />
@@ -75,7 +75,7 @@ export function Footer() {
             className="lg:col-span-1"
           >
             <Link href="/" className="group inline-flex items-center mb-4">
-              <BrandLogo iconSize={38} textSize="text-2xl md:text-[26px]" />
+              <BrandLogo iconSize={30} imageHeight="h-5.5 md:h-6" />
             </Link>
             <p className="text-muted-foreground mb-6 leading-relaxed text-sm">
               Elite digital solutions crafted with precision and innovation. We
@@ -84,7 +84,7 @@ export function Footer() {
             <div className="flex flex-col gap-3 text-sm text-muted-foreground">
               <a
                 href="mailto:support@codenrs.com"
-                className="inline-flex items-center gap-2 hover:text-[#00F5D4] transition-colors"
+                className="inline-flex items-center gap-2 hover:text-[#00D2FF] transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 support@codenrs.com
@@ -105,10 +105,10 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-muted-foreground hover:text-[#00F5D4] transition-colors inline-flex items-center gap-1.5"
+                    className="text-muted-foreground hover:text-[#00D2FF] transition-colors inline-flex items-center gap-1.5"
                   >
                     <span>{link.label}</span>
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#00F5D4]/10 text-[#00F5D4] font-medium">New</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#00D2FF]/10 text-[#00D2FF] font-medium">New</span>
                   </Link>
                 </li>
               ))}
@@ -128,7 +128,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-muted-foreground hover:text-[#00F5D4] transition-colors"
+                    className="text-muted-foreground hover:text-[#00D2FF] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -150,7 +150,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-muted-foreground hover:text-[#00F5D4] transition-colors"
+                    className="text-muted-foreground hover:text-[#00D2FF] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -174,7 +174,7 @@ export function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-muted-foreground hover:text-[#00F5D4] transition-colors group"
+                    className="inline-flex items-center gap-2 text-muted-foreground hover:text-[#00D2FF] transition-colors group"
                   >
                     {link.label}
                     <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
@@ -196,13 +196,13 @@ export function Footer() {
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <Link
                 href="/privacy"
-                className="hover:text-[#00F5D4] transition-colors"
+                className="hover:text-[#00D2FF] transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="hover:text-[#00F5D4] transition-colors"
+                className="hover:text-[#00D2FF] transition-colors"
               >
                 Terms of Service
               </Link>

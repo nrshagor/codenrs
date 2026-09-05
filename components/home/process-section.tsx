@@ -46,7 +46,7 @@ export function ProcessSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 lg:mb-24"
         >
-          <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
+          <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
             Our Process
           </span>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-balance">
@@ -81,23 +81,23 @@ export function ProcessSection() {
                     index % 2 === 0 ? "lg:pr-16 lg:text-right" : "lg:pl-16"
                   }`}
                 >
-                  <div className="relative p-6 lg:p-8 rounded-2xl bg-card border border-border hover:border-[#00F5D4]/30 transition-colors group">
+                  <div className="relative p-6 lg:p-8 rounded-2xl bg-card border border-border hover:border-[#00D2FF]/30 transition-colors group">
                     {/* Glow */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#00F5D4]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#00D2FF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                     <div className="relative z-10">
                       {/* Icon & Number - Mobile */}
                       <div className="flex items-center gap-4 mb-4 lg:hidden">
-                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#00F5D4]/10">
-                          <step.icon className="w-6 h-6 text-[#00F5D4]" />
+                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#00D2FF]/10">
+                          <step.icon className="w-6 h-6 text-[#00D2FF]" />
                         </div>
-                        <span className="text-4xl font-bold text-[#00F5D4]/20">
+                        <span className="text-4xl font-bold text-[#00D2FF]/20">
                           {step.number}
                         </span>
                       </div>
 
                       {/* Number - Desktop */}
-                      <span className="hidden lg:block text-5xl font-bold text-[#00F5D4]/20 mb-4">
+                      <span className="hidden lg:block text-5xl font-bold text-[#00D2FF]/20 mb-4">
                         {step.number}
                       </span>
 
@@ -110,8 +110,8 @@ export function ProcessSection() {
                 </div>
 
                 {/* Center Icon - Desktop */}
-                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center w-16 h-16 rounded-full bg-background border-2 border-[#00F5D4] shadow-[0_0_20px_rgba(0,245,212,0.3)]">
-                  <step.icon className="w-7 h-7 text-[#00F5D4]" />
+                <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center w-16 h-16 rounded-full bg-background border-2 border-[#00D2FF] shadow-[0_0_20px_rgba(0,210,255,0.4)]">
+                  <step.icon className="w-7 h-7 text-[#00D2FF]" />
                 </div>
 
                 {/* Spacer */}

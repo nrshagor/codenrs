@@ -56,7 +56,7 @@ export function HeroSection() {
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 245, 212, ${particle.opacity})`;
+        ctx.fillStyle = `rgba(0, 210, 255, ${particle.opacity})`;
         ctx.fill();
       });
 
@@ -71,7 +71,7 @@ export function HeroSection() {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(0, 245, 212, ${0.1 * (1 - distance / 150)})`;
+            ctx.strokeStyle = `rgba(0, 210, 255, ${0.1 * (1 - distance / 150)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -104,7 +104,7 @@ export function HeroSection() {
 
       {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00F5D4]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
@@ -133,11 +133,11 @@ export function HeroSection() {
             <span className="block mt-2">
               Experiences That{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-[#00F5D4] to-[#00F5D4]/70">
+                <span className="relative z-10 text-[#00D2FF]">
                   Matter
                 </span>
                 <motion.span
-                  className="absolute inset-0 bg-[#00F5D4]/20 blur-2xl"
+                  className="absolute inset-0 bg-[#00D2FF]/20 blur-2xl"
                   animate={{ opacity: [0.5, 0.8, 0.5] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 />
@@ -168,7 +168,7 @@ export function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00F5D4] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_30px_rgba(0,245,212,0.4)] transition-all duration-300"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_30px_rgba(0,210,255,0.4)] transition-all duration-300"
               >
                 Start Your Project
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -178,9 +178,9 @@ export function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group inline-flex items-center gap-2 px-8 py-4 border border-border hover:border-[#00F5D4]/50 rounded-full transition-all duration-300"
+                className="group inline-flex items-center gap-2 px-8 py-4 border border-border hover:border-[#00D2FF]/50 rounded-full transition-all duration-300"
               >
-                <Play className="w-5 h-5 text-[#00F5D4]" />
+                <Play className="w-5 h-5 text-[#00D2FF]" />
                 View Our Work
               </motion.button>
             </Link>
@@ -206,7 +206,7 @@ export function HeroSection() {
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-[#00F5D4] mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-[#00D2FF] mb-2">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">
@@ -230,7 +230,7 @@ export function HeroSection() {
           transition={{ duration: 1.5, repeat: Infinity }}
           className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2"
         >
-          <motion.div className="w-1.5 h-1.5 rounded-full bg-[#00F5D4]" />
+          <motion.div className="w-1.5 h-1.5 rounded-full bg-[#00D2FF]" />
         </motion.div>
       </motion.div>
     </section>

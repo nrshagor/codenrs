@@ -69,8 +69,8 @@ export default function AboutPage() {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#00F5D4]/5 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00F5D4]/5 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#00D2FF]/5 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -79,7 +79,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
               About CODENRS
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
@@ -124,12 +124,12 @@ export default function AboutPage() {
               className="relative"
             >
               <div className="relative p-8 rounded-2xl bg-card border border-border">
-                <Quote className="w-12 h-12 text-[#00F5D4]/20 mb-4" />
+                <Quote className="w-12 h-12 text-[#00D2FF]/20 mb-4" />
                 <blockquote className="text-xl font-medium mb-6 leading-relaxed">
                   &quot;We don&apos;t just build websites—we craft digital ecosystems that drive measurable business outcomes. That distinction is what sets CODENRS apart.&quot;
                 </blockquote>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00F5D4]/20 to-[#00F5D4]/5 flex items-center justify-center font-bold text-[#00F5D4]">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00D2FF]/20 to-[#00D2FF]/5 flex items-center justify-center font-bold text-[#00D2FF]">
                     N
                   </div>
                   <div>
@@ -155,7 +155,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
               Our Philosophy
             </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -177,10 +177,10 @@ export default function AboutPage() {
               <motion.div
                 key={value.title}
                 variants={itemVariants}
-                className="p-8 rounded-2xl bg-card border border-border hover:border-[#00F5D4]/30 transition-colors group"
+                className="p-8 rounded-2xl bg-card border border-border hover:border-[#00D2FF]/30 transition-colors group"
               >
                 <div className="flex items-start gap-4">
-                  <span className="text-4xl font-bold text-[#00F5D4]/20">
+                  <span className="text-4xl font-bold text-[#00D2FF]/20">
                     0{index + 1}
                   </span>
                   <div>
@@ -206,7 +206,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
               Leadership
             </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
@@ -230,7 +230,7 @@ export default function AboutPage() {
                 variants={itemVariants}
                 className="group w-full max-w-md"
               >
-                <div className="rounded-2xl overflow-hidden bg-card border border-border hover:border-[#00F5D4]/30 transition-colors">
+                <div className="rounded-2xl overflow-hidden bg-card border border-border hover:border-[#00D2FF]/30 transition-colors">
                   {/* Image Placeholder */}
                   <div
                     className="h-64 relative"
@@ -246,7 +246,7 @@ export default function AboutPage() {
                   {/* Content */}
                   <div className="p-6">
                     <h3 className="font-bold text-2xl mb-1">{member.name}</h3>
-                    <p className="text-[#00F5D4] text-sm font-medium mb-3">{member.role}</p>
+                    <p className="text-[#00D2FF] text-sm font-medium mb-3">{member.role}</p>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                       {member.bio}
                     </p>
@@ -255,7 +255,7 @@ export default function AboutPage() {
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary hover:bg-[#00F5D4]/10 text-muted-foreground hover:text-[#00F5D4] text-xs font-medium transition-colors"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary hover:bg-[#00D2FF]/10 text-muted-foreground hover:text-[#00D2FF] text-xs font-medium transition-colors"
                       >
                         <Linkedin className="w-4 h-4" />
                         <span>LinkedIn</span>
@@ -264,7 +264,7 @@ export default function AboutPage() {
                         href={member.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary hover:bg-[#00F5D4]/10 text-muted-foreground hover:text-[#00F5D4] text-xs font-medium transition-colors"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary hover:bg-[#00D2FF]/10 text-muted-foreground hover:text-[#00D2FF] text-xs font-medium transition-colors"
                       >
                         <Globe className="w-4 h-4" />
                         <span>Portfolio</span>
@@ -288,7 +288,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
               Our Journey
             </span>
             <h2 className="text-3xl md:text-5xl font-bold">
@@ -324,7 +324,7 @@ export default function AboutPage() {
                     }`}
                   >
                     <div className="inline-block p-4 rounded-xl bg-card border border-border">
-                      <span className="text-2xl font-bold text-[#00F5D4]">
+                      <span className="text-2xl font-bold text-[#00D2FF]">
                         {milestone.year}
                       </span>
                       <p className="text-muted-foreground mt-1">
@@ -332,7 +332,7 @@ export default function AboutPage() {
                       </p>
                     </div>
                   </div>
-                  <div className="hidden md:flex w-4 h-4 rounded-full bg-[#00F5D4] shadow-[0_0_10px_rgba(0,245,212,0.5)]" />
+                  <div className="hidden md:flex w-4 h-4 rounded-full bg-[#00D2FF] shadow-[0_0_10px_rgba(0,210,255,0.5)]" />
                   <div className="hidden md:block md:w-1/2" />
                 </motion.div>
               ))}
@@ -342,7 +342,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 lg:py-32 bg-gradient-to-b from-background to-[#00F5D4]/5">
+      <section className="py-24 lg:py-32 bg-gradient-to-b from-background to-[#00D2FF]/5">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -361,7 +361,7 @@ export default function AboutPage() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00F5D4] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_30px_rgba(0,245,212,0.4)] transition-all duration-300"
+                  className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300"
                 >
                   Start a Project
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -371,7 +371,7 @@ export default function AboutPage() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-2 px-8 py-4 border border-border hover:border-[#00F5D4]/50 rounded-full transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-8 py-4 border border-border hover:border-[#00D2FF]/50 rounded-full transition-all duration-300"
                 >
                   Explore Our Work
                 </motion.button>

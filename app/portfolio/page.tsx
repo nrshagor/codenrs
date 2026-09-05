@@ -76,8 +76,8 @@ export default function PortfolioPage() {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#00F5D4]/5 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00F5D4]/5 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#00D2FF]/5 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -86,7 +86,7 @@ export default function PortfolioPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
               Our Work
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
@@ -114,8 +114,8 @@ export default function PortfolioPage() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === category
-                    ? "bg-[#00F5D4] text-[#0D0D0D]"
-                    : "bg-card border border-border hover:border-[#00F5D4]/50 text-muted-foreground hover:text-foreground"
+                    ? "bg-[#00D2FF] text-[#0D0D0D]"
+                    : "bg-card border border-border hover:border-[#00D2FF]/50 text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {category}
@@ -152,7 +152,7 @@ export default function PortfolioPage() {
                     target={project.href.startsWith("http") ? "_blank" : undefined}
                     rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   >
-                    <div className="relative h-full rounded-2xl overflow-hidden bg-card border border-border hover:border-[#00F5D4]/30 transition-all duration-500">
+                    <div className="relative h-full rounded-2xl overflow-hidden bg-card border border-border hover:border-[#00D2FF]/30 transition-all duration-500">
                       {/* Image Area */}
                       <div
                         className="h-64 lg:h-72 relative overflow-hidden"
@@ -165,11 +165,11 @@ export default function PortfolioPage() {
                         </div>
 
                         {/* Hover Overlay */}
-                        <div className="absolute inset-0 bg-[#00F5D4]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute inset-0 bg-[#00D2FF]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                         {/* View Project Button */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                          <span className="inline-flex items-center gap-2 px-6 py-3 bg-[#00F5D4] text-[#0D0D0D] font-medium rounded-full">
+                          <span className="inline-flex items-center gap-2 px-6 py-3 bg-[#00D2FF] text-[#0D0D0D] font-medium rounded-full">
                             View Project
                             <ExternalLink className="w-4 h-4" />
                           </span>
@@ -178,7 +178,7 @@ export default function PortfolioPage() {
                         {/* Featured Badge */}
                         {project.featured && (
                           <div className="absolute top-4 left-4">
-                            <span className="px-3 py-1 bg-[#00F5D4] text-[#0D0D0D] text-xs font-semibold rounded-full">
+                            <span className="px-3 py-1 bg-[#00D2FF] text-[#0D0D0D] text-xs font-semibold rounded-full">
                               Featured
                             </span>
                           </div>
@@ -188,13 +188,13 @@ export default function PortfolioPage() {
                       {/* Content */}
                       <div className="p-6">
                         {/* Category */}
-                        <span className="inline-block text-xs font-medium text-[#00F5D4] uppercase tracking-wider mb-3">
+                        <span className="inline-block text-xs font-medium text-[#00D2FF] uppercase tracking-wider mb-3">
                           {project.category}
                         </span>
 
                         {/* Title */}
                         <div className="flex items-start justify-between gap-4 mb-3">
-                          <h3 className="text-xl font-bold group-hover:text-[#00F5D4] transition-colors">
+                          <h3 className="text-xl font-bold group-hover:text-[#00D2FF] transition-colors">
                             {project.title}
                           </h3>
                           <ArrowUpRight className="w-5 h-5 text-muted-foreground opacity-0 group-hover:opacity-100 -translate-y-1 translate-x-1 group-hover:translate-y-0 group-hover:translate-x-0 transition-all shrink-0" />
@@ -219,7 +219,7 @@ export default function PortfolioPage() {
 
                         {/* Results */}
                         <div className="pt-4 border-t border-border">
-                          <span className="text-sm font-semibold text-[#00F5D4]">
+                          <span className="text-sm font-semibold text-[#00D2FF]">
                             {project.results}
                           </span>
                         </div>
@@ -264,7 +264,7 @@ export default function PortfolioPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00F5D4] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_30px_rgba(0,245,212,0.4)] transition-all duration-300"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300"
               >
                 Start Your Project
                 <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />

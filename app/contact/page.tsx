@@ -64,8 +64,8 @@ export default function ContactPage() {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#00F5D4]/5 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00F5D4]/5 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#00D2FF]/5 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -74,7 +74,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
               Get In Touch
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
@@ -107,8 +107,8 @@ export default function ContactPage() {
               <div className="flex flex-col gap-6 mb-12">
                 {contactInfo.map((info) => (
                   <div key={info.label} className="flex items-start gap-4">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#00F5D4]/10 shrink-0">
-                      <info.icon className="w-5 h-5 text-[#00F5D4]" />
+                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#00D2FF]/10 shrink-0">
+                      <info.icon className="w-5 h-5 text-[#00D2FF]" />
                     </div>
                     <div>
                       <span className="block text-sm text-muted-foreground mb-1">
@@ -117,7 +117,7 @@ export default function ContactPage() {
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="font-medium hover:text-[#00F5D4] transition-colors"
+                          className="font-medium hover:text-[#00D2FF] transition-colors"
                         >
                           {info.value}
                         </a>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Email Support</span>
-                    <span className="text-[#00F5D4] font-medium">24/7 Monitored</span>
+                    <span className="text-[#00D2FF] font-medium">24/7 Monitored</span>
                   </div>
                 </div>
               </div>
@@ -161,10 +161,10 @@ export default function ContactPage() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="h-full flex flex-col items-center justify-center text-center p-8 rounded-2xl bg-card border border-[#00F5D4]/30"
+                  className="h-full flex flex-col items-center justify-center text-center p-8 rounded-2xl bg-card border border-[#00D2FF]/30"
                 >
-                  <div className="w-16 h-16 rounded-full bg-[#00F5D4]/10 flex items-center justify-center mb-6">
-                    <Check className="w-8 h-8 text-[#00F5D4]" />
+                  <div className="w-16 h-16 rounded-full bg-[#00D2FF]/10 flex items-center justify-center mb-6">
+                    <Check className="w-8 h-8 text-[#00D2FF]" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Message Sent!</h3>
                   <p className="text-muted-foreground mb-8 max-w-md">
@@ -182,7 +182,7 @@ export default function ContactPage() {
                         message: "",
                       })
                     }}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#00F5D4] text-[#0D0D0D] font-semibold rounded-full"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full"
                   >
                     Send Another Message
                     <ArrowRight className="w-4 h-4" />
@@ -202,7 +202,7 @@ export default function ContactPage() {
                         htmlFor="name"
                         className="block text-sm font-medium mb-2"
                       >
-                        Full Name <span className="text-[#00F5D4]">*</span>
+                        Full Name <span className="text-[#00D2FF]">*</span>
                       </label>
                       <input
                         type="text"
@@ -212,7 +212,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="John Doe"
-                        className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-[#00F5D4] focus:outline-none focus:ring-2 focus:ring-[#00F5D4]/20 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-[#00D2FF] focus:outline-none focus:ring-2 focus:ring-[#00D2FF]/20 transition-all"
                       />
                     </div>
 
@@ -222,7 +222,7 @@ export default function ContactPage() {
                         htmlFor="email"
                         className="block text-sm font-medium mb-2"
                       >
-                        Email Address <span className="text-[#00F5D4]">*</span>
+                        Email Address <span className="text-[#00D2FF]">*</span>
                       </label>
                       <input
                         type="email"
@@ -232,7 +232,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="john@example.com"
-                        className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-[#00F5D4] focus:outline-none focus:ring-2 focus:ring-[#00F5D4]/20 transition-all"
+                        className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-[#00D2FF] focus:outline-none focus:ring-2 focus:ring-[#00D2FF]/20 transition-all"
                       />
                     </div>
                   </div>
@@ -243,7 +243,7 @@ export default function ContactPage() {
                       htmlFor="projectType"
                       className="block text-sm font-medium mb-2"
                     >
-                      Project Type <span className="text-[#00F5D4]">*</span>
+                      Project Type <span className="text-[#00D2FF]">*</span>
                     </label>
                     <select
                       id="projectType"
@@ -251,7 +251,7 @@ export default function ContactPage() {
                       required
                       value={formData.projectType}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-[#00F5D4] focus:outline-none focus:ring-2 focus:ring-[#00F5D4]/20 transition-all appearance-none"
+                      className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-[#00D2FF] focus:outline-none focus:ring-2 focus:ring-[#00D2FF]/20 transition-all appearance-none"
                     >
                       <option value="">Select a project type</option>
                       {projectTypes.map((type) => (
@@ -268,7 +268,7 @@ export default function ContactPage() {
                       htmlFor="message"
                       className="block text-sm font-medium mb-2"
                     >
-                      Your Message <span className="text-[#00F5D4]">*</span>
+                      Your Message <span className="text-[#00D2FF]">*</span>
                     </label>
                     <textarea
                       id="message"
@@ -278,7 +278,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell us about your project, goals, and timeline..."
-                      className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-[#00F5D4] focus:outline-none focus:ring-2 focus:ring-[#00F5D4]/20 transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-[#00D2FF] focus:outline-none focus:ring-2 focus:ring-[#00D2FF]/20 transition-all resize-none"
                     />
                   </div>
 
@@ -288,7 +288,7 @@ export default function ContactPage() {
                     whileTap={{ scale: 0.98 }}
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00F5D4] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_30px_rgba(0,245,212,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
@@ -305,7 +305,7 @@ export default function ContactPage() {
 
                   <p className="text-xs text-muted-foreground text-center mt-4">
                     By submitting this form, you agree to our{" "}
-                    <a href="/privacy" className="text-[#00F5D4] hover:underline">
+                    <a href="/privacy" className="text-[#00D2FF] hover:underline">
                       Privacy Policy
                     </a>
                     .

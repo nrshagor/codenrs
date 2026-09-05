@@ -38,7 +38,7 @@ export function ClientMarquee() {
                 href={client.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-2xl font-semibold text-muted-foreground/60 hover:text-[#00F5D4] transition-colors duration-300 whitespace-nowrap"
+                className="text-xl md:text-2xl font-semibold text-muted-foreground/60 hover:text-[#00D2FF] transition-colors duration-300 whitespace-nowrap"
               >
                 {client.name}
               </a>
@@ -49,7 +49,7 @@ export function ClientMarquee() {
                 href={client.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-2xl font-semibold text-muted-foreground/60 hover:text-[#00F5D4] transition-colors duration-300 whitespace-nowrap"
+                className="text-xl md:text-2xl font-semibold text-muted-foreground/60 hover:text-[#00D2FF] transition-colors duration-300 whitespace-nowrap"
               >
                 {client.name}
               </a>
@@ -64,7 +64,7 @@ export function ClientMarquee() {
                 href={client.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-2xl font-semibold text-muted-foreground/60 hover:text-[#00F5D4] transition-colors duration-300 whitespace-nowrap"
+                className="text-xl md:text-2xl font-semibold text-muted-foreground/60 hover:text-[#00D2FF] transition-colors duration-300 whitespace-nowrap"
               >
                 {client.name}
               </a>
@@ -75,7 +75,7 @@ export function ClientMarquee() {
                 href={client.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-2xl font-semibold text-muted-foreground/60 hover:text-[#00F5D4] transition-colors duration-300 whitespace-nowrap"
+                className="text-xl md:text-2xl font-semibold text-muted-foreground/60 hover:text-[#00D2FF] transition-colors duration-300 whitespace-nowrap"
               >
                 {client.name}
               </a>

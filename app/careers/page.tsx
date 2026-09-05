@@ -8,8 +8,8 @@ export default function CareersPage() {
   return (
     <div className="pt-20 min-h-screen">
       <section className="py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#00F5D4]/5 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00F5D4]/5 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#00D2FF]/5 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
@@ -17,11 +17,11 @@ export default function CareersPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="w-16 h-16 rounded-2xl bg-[#00F5D4]/10 border border-[#00F5D4]/30 flex items-center justify-center mx-auto mb-6">
-              <Briefcase className="w-8 h-8 text-[#00F5D4]" />
+            <div className="w-16 h-16 rounded-2xl bg-[#00D2FF]/10 border border-[#00D2FF]/30 flex items-center justify-center mx-auto mb-6">
+              <Briefcase className="w-8 h-8 text-[#00D2FF]" />
             </div>
 
-            <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
               Careers at CODENRS
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
@@ -39,7 +39,7 @@ export default function CareersPage() {
               
               <a
                 href="mailto:support@codenrs.com?subject=Job Inquiry / Portfolio"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00F5D4] text-[#0D0D0D] font-semibold hover:shadow-[0_0_25px_rgba(0,245,212,0.4)] transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00D2FF] text-[#0D0D0D] font-semibold hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all"
               >
                 <Mail className="w-4 h-4" />
                 Send Your Resume (support@codenrs.com)
@@ -48,12 +48,12 @@ export default function CareersPage() {
 
             <div className="flex justify-center gap-4 mt-6">
               <Link href="/">
-                <button className="px-6 py-3 border border-border rounded-full hover:border-[#00F5D4]/50 transition-colors text-sm font-medium">
+                <button className="px-6 py-3 border border-border rounded-full hover:border-[#00D2FF]/50 transition-colors text-sm font-medium">
                   Return to Home
                 </button>
               </Link>
               <Link href="/portfolio">
-                <button className="px-6 py-3 border border-border rounded-full hover:border-[#00F5D4]/50 transition-colors text-sm font-medium">
+                <button className="px-6 py-3 border border-border rounded-full hover:border-[#00D2FF]/50 transition-colors text-sm font-medium">
                   Explore Projects
                 </button>
               </Link>
