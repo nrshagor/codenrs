@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Quote, Linkedin, Twitter } from "lucide-react"
+import { ArrowRight, Quote, Linkedin, Globe } from "lucide-react"
 
 const values = [
   {
@@ -29,40 +29,22 @@ const values = [
 
 const team = [
   {
-    name: "Alexandra Chen",
+    name: "N R SHAGOR",
     role: "Founder & CEO",
-    bio: "Former engineering lead at major tech companies, Alexandra founded CODENRS with a vision to bridge the gap between technical excellence and creative innovation.",
-    image: "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
-  },
-  {
-    name: "Marcus Williams",
-    role: "Chief Technology Officer",
-    bio: "With 15+ years building scalable systems, Marcus ensures every technical solution we deliver meets the highest standards of performance and reliability.",
-    image: "linear-gradient(135deg, #1a2a1a 0%, #0f3d0f 100%)",
-  },
-  {
-    name: "Sofia Rodriguez",
-    role: "Creative Director",
-    bio: "Award-winning designer who has shaped brand identities for Fortune 500 companies. Sofia leads our creative vision with an unwavering eye for detail.",
-    image: "linear-gradient(135deg, #2a1a2a 0%, #3d0f3d 100%)",
-  },
-  {
-    name: "James Park",
-    role: "Head of Strategy",
-    bio: "Former management consultant turned digital strategist. James helps clients navigate complex digital transformations with data-driven approaches.",
-    image: "linear-gradient(135deg, #2a2a1a 0%, #3d3d0f 100%)",
+    bio: "Passionate technologist, full-stack engineer, and digital strategist dedicated to crafting impactful digital ecosystems, scalable architectures, and next-generation web experiences.",
+    image: "linear-gradient(135deg, #021a28 0%, #032A46 50%, #0a3d62 100%)",
+    linkedin: "https://www.linkedin.com/in/nrshagor/",
+    website: "https://nrshagor.com/",
   },
 ]
 
 const milestones = [
-  { year: "2017", event: "Founded in San Francisco" },
-  { year: "2018", event: "First major enterprise client" },
-  { year: "2019", event: "Expanded to 25 team members" },
-  { year: "2020", event: "Launched remote-first operations" },
-  { year: "2021", event: "100+ projects delivered" },
-  { year: "2022", event: "Opened European office" },
-  { year: "2023", event: "Named Top Digital Agency" },
-  { year: "2024", event: "150+ satisfied clients" },
+  { year: "2020", event: "Founded CODENRS with a vision for digital excellence" },
+  { year: "2021", event: "Delivered first set of enterprise platforms" },
+  { year: "2022", event: "Expanded full-stack & modern digital solutions" },
+  { year: "2023", event: "Delivered 50+ high-impact digital products" },
+  { year: "2024", event: "Scaled global client collaborations" },
+  { year: "2026", event: "Crafting next-generation digital ecosystems" },
 ]
 
 const containerVariants = {
@@ -101,7 +83,7 @@ export default function AboutPage() {
               About CODENRS
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
-              Crafting Digital Excellence Since 2017
+              Crafting Digital Excellence Since 2020
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We are a collective of strategists, designers, and engineers united by a singular obsession: building digital experiences that matter. What began as a small studio has evolved into a full-service digital agency trusted by ambitious brands worldwide.
@@ -126,7 +108,7 @@ export default function AboutPage() {
                   CODENRS was born from a simple observation: too many agencies prioritize speed over substance, delivering work that looks good but fails to perform. We set out to build something different—a studio where technical excellence and creative vision would be equally valued.
                 </p>
                 <p>
-                  Our founding team came together with complementary expertise spanning engineering, design, and strategy. We shared a belief that the best digital experiences emerge when these disciplines collaborate closely from day one, not in siloed phases.
+                  Our team came together with complementary expertise spanning engineering, design, and strategy. We shared a belief that the best digital experiences emerge when these disciplines collaborate closely from day one, not in siloed phases.
                 </p>
                 <p>
                   Today, we work with startups disrupting industries and established enterprises reinventing themselves. Our approach remains the same: listen deeply, think strategically, execute flawlessly. Every project is an opportunity to demonstrate what's possible when craft meets ambition.
@@ -147,9 +129,11 @@ export default function AboutPage() {
                   &quot;We don&apos;t just build websites—we craft digital ecosystems that drive measurable business outcomes. That distinction is what sets CODENRS apart.&quot;
                 </blockquote>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00F5D4]/20 to-[#00F5D4]/5" />
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00F5D4]/20 to-[#00F5D4]/5 flex items-center justify-center font-bold text-[#00F5D4]">
+                    N
+                  </div>
                   <div>
-                    <div className="font-semibold">Alexandra Chen</div>
+                    <div className="font-semibold">N R SHAGOR</div>
                     <div className="text-sm text-muted-foreground">
                       Founder & CEO
                     </div>
@@ -223,13 +207,13 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <span className="text-sm font-medium text-[#00F5D4] uppercase tracking-widest mb-4 block">
-              The Team
+              Leadership
             </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Meet the Minds Behind CODENRS
+              Meet Our Founder
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A diverse team of experts united by a shared commitment to excellence.
+              Visionary leadership driving digital innovation, technical excellence, and transformative client success.
             </p>
           </motion.div>
 
@@ -238,13 +222,13 @@ export default function AboutPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="flex justify-center"
           >
             {team.map((member) => (
               <motion.div
                 key={member.name}
                 variants={itemVariants}
-                className="group"
+                className="group w-full max-w-md"
               >
                 <div className="rounded-2xl overflow-hidden bg-card border border-border hover:border-[#00F5D4]/30 transition-colors">
                   {/* Image Placeholder */}
@@ -253,31 +237,37 @@ export default function AboutPage() {
                     style={{ background: member.image }}
                   >
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-6xl font-bold text-white/10">
-                        {member.name.charAt(0)}
+                      <span className="text-7xl font-bold text-white/10">
+                        N
                       </span>
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="font-bold text-lg mb-1">{member.name}</h3>
-                    <p className="text-[#00F5D4] text-sm mb-3">{member.role}</p>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    <h3 className="font-bold text-2xl mb-1">{member.name}</h3>
+                    <p className="text-[#00F5D4] text-sm font-medium mb-3">{member.role}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">
                       {member.bio}
                     </p>
                     <div className="flex items-center gap-3">
                       <a
-                        href="#"
-                        className="p-2 rounded-full bg-secondary hover:bg-[#00F5D4]/10 transition-colors"
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary hover:bg-[#00F5D4]/10 text-muted-foreground hover:text-[#00F5D4] text-xs font-medium transition-colors"
                       >
-                        <Linkedin className="w-4 h-4 text-muted-foreground hover:text-[#00F5D4]" />
+                        <Linkedin className="w-4 h-4" />
+                        <span>LinkedIn</span>
                       </a>
                       <a
-                        href="#"
-                        className="p-2 rounded-full bg-secondary hover:bg-[#00F5D4]/10 transition-colors"
+                        href={member.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary hover:bg-[#00F5D4]/10 text-muted-foreground hover:text-[#00F5D4] text-xs font-medium transition-colors"
                       >
-                        <Twitter className="w-4 h-4 text-muted-foreground hover:text-[#00F5D4]" />
+                        <Globe className="w-4 h-4" />
+                        <span>Portfolio</span>
                       </a>
                     </div>
                   </div>
@@ -377,13 +367,13 @@ export default function AboutPage() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </motion.button>
               </Link>
-              <Link href="/careers">
+              <Link href="/portfolio">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="inline-flex items-center gap-2 px-8 py-4 border border-border hover:border-[#00F5D4]/50 rounded-full transition-all duration-300"
                 >
-                  View Careers
+                  Explore Our Work
                 </motion.button>
               </Link>
             </div>

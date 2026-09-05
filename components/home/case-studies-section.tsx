@@ -7,33 +7,43 @@ import { ArrowUpRight } from "lucide-react"
 const caseStudies = [
   {
     id: 1,
-    title: "Quantum Finance Platform",
-    category: "Web Development",
+    title: "Qbits Technology",
+    category: "Web Development & Hardware",
     description:
-      "A comprehensive fintech platform that revolutionized how users manage investments with real-time analytics and AI-powered insights.",
-    results: "+340% user engagement",
-    image: "linear-gradient(135deg, #0D0D0D 0%, #1a1a2e 50%, #16213e 100%)",
-    href: "/portfolio/quantum-finance",
+      "A high-performance tech & computing solutions platform featuring next-gen laptops, mini PCs, and smart hardware with custom e-commerce architecture.",
+    results: "Global Hardware & Tech Brand",
+    image: "linear-gradient(135deg, #021a28 0%, #032A46 50%, #0a3d62 100%)",
+    href: "https://qbits.com/",
   },
   {
     id: 2,
-    title: "Nova Brand Identity",
-    category: "Creative Design",
+    title: "Holistic Business Solutions",
+    category: "Digital Agency & Strategy",
     description:
-      "Complete brand overhaul for a tech startup, including visual identity, motion design language, and comprehensive design system.",
-    results: "2x brand recognition",
-    image: "linear-gradient(135deg, #0D0D0D 0%, #1a2a1a 50%, #0f3d0f 100%)",
-    href: "/portfolio/nova-brand",
+      "Comprehensive digital agency platform offering full-cycle brand design, digital transformation strategy, and scalable enterprise web experiences.",
+    results: "500+ Delivered & 98% CSAT",
+    image: "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #2563eb 100%)",
+    href: "https://www.holisticbusinessservice.com/",
   },
   {
     id: 3,
-    title: "CloudScale SEO Campaign",
-    category: "SEO Optimization",
+    title: "MatchMyTees",
+    category: "E-Commerce & Fashion",
     description:
-      "Strategic SEO transformation that propelled a B2B SaaS company from page 5 to position 1 for 50+ high-value keywords.",
-    results: "+892% organic traffic",
-    image: "linear-gradient(135deg, #0D0D0D 0%, #2a1a2a 50%, #3d0f3d 100%)",
-    href: "/portfolio/cloudscale-seo",
+      "High-traffic streetwear and sneaker-matching apparel e-commerce platform offering custom apparel coordination for iconic footwear brands.",
+    results: "+240% Sales Conversion",
+    image: "linear-gradient(135deg, #18181b 0%, #27272a 50%, #ea580c 100%)",
+    href: "https://www.matchmytees.com/",
+  },
+  {
+    id: 4,
+    title: "XeTRoo PropTech",
+    category: "PropTech & Real Estate",
+    description:
+      "Innovative PropTech platform transforming real estate with smart property solutions, digital asset workflows, and next-generation perspective.",
+    results: "Leading PropTech Innovation",
+    image: "linear-gradient(135deg, #140609 0%, #2a0b12 50%, #DD183B 100%)",
+    href: "https://www.xetrooproptech.ltd/",
   },
 ]
 
@@ -67,7 +77,7 @@ export function CaseStudiesSection() {
         </motion.div>
 
         {/* Case Studies Grid */}
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {caseStudies.map((study, index) => (
             <motion.div
               key={study.id}
@@ -76,7 +86,12 @@ export function CaseStudiesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
             >
-              <Link href={study.href} className="group block h-full">
+              <Link
+                href={study.href}
+                target={study.href.startsWith("http") ? "_blank" : undefined}
+                rel={study.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="group block h-full"
+              >
                 <div className="relative h-full rounded-2xl overflow-hidden bg-card border border-border hover:border-[#00F5D4]/30 transition-all duration-500">
                   {/* Image Area */}
                   <div

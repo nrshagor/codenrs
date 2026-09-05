@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   description: 'Transform your digital presence with CODENRS. We deliver exceptional web development, creative design, SEO optimization, and data-driven solutions.',
   keywords: ['web development', 'digital agency', 'UI/UX design', 'SEO', 'creative studio'],
   authors: [{ name: 'CODENRS' }],
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: 'CODENRS | Elite Digital Solutions Agency',
     description: 'Transform your digital presence with premium digital solutions.',

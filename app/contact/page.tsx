@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, MapPin, Phone, Send, Check, ArrowRight } from "lucide-react"
+import { Mail, Clock, Send, Check, ArrowRight } from "lucide-react"
 
 const projectTypes = [
   "Web Development",
@@ -16,20 +16,14 @@ const projectTypes = [
 const contactInfo = [
   {
     icon: Mail,
-    label: "Email",
-    value: "hello@codenrs.com",
-    href: "mailto:hello@codenrs.com",
+    label: "Email Support",
+    value: "support@codenrs.com",
+    href: "mailto:support@codenrs.com",
   },
   {
-    icon: Phone,
-    label: "Phone",
-    value: "+1 (234) 567-890",
-    href: "tel:+1234567890",
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "San Francisco, CA",
+    icon: Clock,
+    label: "Response Time",
+    value: "Within 24 Hours",
     href: null,
   },
 ]
@@ -107,7 +101,7 @@ export default function ContactPage() {
             >
               <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Prefer to reach out directly? Here&apos;s how you can get in touch with us. Our team is available Monday through Friday, 9 AM to 6 PM PST.
+                Prefer to reach out directly? Send us an email and our dedicated team will get back to you promptly.
               </p>
 
               <div className="flex flex-col gap-6 mb-12">
@@ -135,21 +129,21 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* Office Hours */}
+              {/* Support Availability */}
               <div className="p-6 rounded-2xl bg-card border border-border">
-                <h3 className="font-semibold mb-4">Office Hours</h3>
+                <h3 className="font-semibold mb-4">Support Availability</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM PST</span>
+                    <span>9:00 AM - 6:00 PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Saturday</span>
-                    <span>By Appointment</span>
+                    <span>10:00 AM - 4:00 PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Sunday</span>
-                    <span>Closed</span>
+                    <span className="text-muted-foreground">Email Support</span>
+                    <span className="text-[#00F5D4] font-medium">24/7 Monitored</span>
                   </div>
                 </div>
               </div>

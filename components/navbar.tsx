@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { Menu, X, Sun, Moon } from "lucide-react";
+import { BrandLogo } from "@/components/brand-logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -47,23 +49,13 @@ export function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="group flex items-center gap-2">
+          {/* Logo: Icon + Styled Wordmark */}
+          <Link href="/" className="group flex items-center">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative"
             >
-              <span className="text-2xl font-bold tracking-tight">
-                CODE
-                <span className="text-[#00F5D4]">NRS</span>
-              </span>
-              <motion.div
-                className="absolute -bottom-1 left-0 h-0.5 bg-[#00F5D4]"
-                initial={{ width: 0 }}
-                whileHover={{ width: "100%" }}
-                transition={{ duration: 0.3 }}
-              />
+              <BrandLogo iconSize={38} textSize="text-2xl md:text-[26px]" />
             </motion.div>
           </Link>
 

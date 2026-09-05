@@ -1,10 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
+import { BrandLogo } from "@/components/brand-logo";
 
 const footerLinks = {
+  products: [
+    { label: "PocketLens", href: "/pocket-lens" },
+    { label: "PulseBoard", href: "/pulseboard" },
+    { label: "RevivaIQ", href: "/revivaiq" },
+  ],
   services: [
     { label: "Web Development", href: "/services#development" },
     { label: "Creative Design", href: "/services#creative" },
@@ -15,13 +22,11 @@ const footerLinks = {
     { label: "About Us", href: "/about" },
     { label: "Portfolio", href: "/portfolio" },
     { label: "Blog", href: "/blog" },
-    { label: "Careers", href: "/careers" },
+    { label: "Contact Us", href: "/contact" },
   ],
   social: [
-    { label: "LinkedIn", href: "https://linkedin.com" },
-    { label: "Twitter", href: "https://twitter.com" },
-    { label: "Instagram", href: "https://instagram.com" },
-    { label: "Dribbble", href: "https://dribbble.com" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/nrshagor/" },
+    { label: "Founder Portfolio", href: "https://nrshagor.com/" },
   ],
 };
 
@@ -60,40 +65,54 @@ export function Footer() {
         </motion.div>
 
         {/* Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Brand Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
+            className="lg:col-span-1"
           >
-            <Link href="/" className="inline-block mb-6">
-              <span className="text-2xl font-bold">
-                CODE<span className="text-[#00F5D4]">NRS</span>
-              </span>
+            <Link href="/" className="group inline-flex items-center mb-4">
+              <BrandLogo iconSize={38} textSize="text-2xl md:text-[26px]" />
             </Link>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-muted-foreground mb-6 leading-relaxed text-sm">
               Elite digital solutions crafted with precision and innovation. We
               transform ideas into exceptional digital experiences.
             </p>
             <div className="flex flex-col gap-3 text-sm text-muted-foreground">
               <a
-                href="mailto:hello@codenrs.com"
+                href="mailto:support@codenrs.com"
                 className="inline-flex items-center gap-2 hover:text-[#00F5D4] transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                hello@codenrs.com
+                support@codenrs.com
               </a>
-              {/* <a href="tel:+1234567890" className="inline-flex items-center gap-2 hover:text-[#00F5D4] transition-colors">
-                <Phone className="w-4 h-4" />
-                +1 (234) 567-890
-              </a>
-              <span className="inline-flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                San Francisco, CA
-              </span> */}
             </div>
+          </motion.div>
+
+          {/* Products Column */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+          >
+            <h3 className="font-semibold mb-6">Products</h3>
+            <ul className="flex flex-col gap-3">
+              {footerLinks.products.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    className="text-muted-foreground hover:text-[#00F5D4] transition-colors inline-flex items-center gap-1.5"
+                  >
+                    <span>{link.label}</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#00F5D4]/10 text-[#00F5D4] font-medium">New</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </motion.div>
 
           {/* Services Column */}

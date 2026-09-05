@@ -10,7 +10,7 @@ const featuredPost = {
   excerpt:
     "From AI-powered development tools to the rise of edge computing, we explore the technologies and methodologies that will define the next era of web development. Understanding these trends isn't just about staying current—it's about positioning your business for competitive advantage.",
   category: "Technology",
-  author: "Alexandra Chen",
+  author: "N R SHAGOR",
   date: "March 15, 2026",
   readTime: "8 min read",
   image: "linear-gradient(135deg, #0D0D0D 0%, #1a1a2e 50%, #16213e 100%)",
@@ -24,7 +24,7 @@ const posts = [
     excerpt:
       "Building design systems that work across teams, products, and years of evolution requires thoughtful architecture. Here's what we've learned from implementing systems at scale.",
     category: "Design",
-    author: "Sofia Rodriguez",
+    author: "N R SHAGOR",
     date: "March 10, 2026",
     readTime: "6 min read",
     image: "linear-gradient(135deg, #0D0D0D 0%, #1a2a1a 50%, #0f3d0f 100%)",
@@ -36,7 +36,7 @@ const posts = [
     excerpt:
       "As search engines become increasingly AI-driven, traditional SEO tactics need evolution. Discover how to optimize for both algorithms and authentic user value.",
     category: "SEO",
-    author: "James Park",
+    author: "CODENRS Team",
     date: "March 5, 2026",
     readTime: "7 min read",
     image: "linear-gradient(135deg, #0D0D0D 0%, #2a1a2a 50%, #3d0f3d 100%)",
@@ -48,7 +48,7 @@ const posts = [
     excerpt:
       "Every 100ms of load time improvement can increase conversion rates by up to 8%. We break down the technical strategies that deliver measurable business impact.",
     category: "Development",
-    author: "Marcus Williams",
+    author: "N R SHAGOR",
     date: "February 28, 2026",
     readTime: "10 min read",
     image: "linear-gradient(135deg, #0D0D0D 0%, #2a2a1a 50%, #3d3d0f 100%)",
@@ -60,7 +60,7 @@ const posts = [
     excerpt:
       "In an era of skepticism, how do digital experiences build genuine trust? We explore the intersection of design psychology and brand strategy.",
     category: "Branding",
-    author: "Sofia Rodriguez",
+    author: "CODENRS Team",
     date: "February 20, 2026",
     readTime: "5 min read",
     image: "linear-gradient(135deg, #0D0D0D 0%, #1a1a3a 50%, #0f0f4d 100%)",
@@ -72,7 +72,7 @@ const posts = [
     excerpt:
       "Having data isn't enough—you need the right frameworks for turning insights into action. Here's how leading organizations operationalize analytics.",
     category: "Analytics",
-    author: "James Park",
+    author: "CODENRS Team",
     date: "February 15, 2026",
     readTime: "8 min read",
     image: "linear-gradient(135deg, #0D0D0D 0%, #3a1a1a 50%, #4d0f0f 100%)",
@@ -84,7 +84,7 @@ const posts = [
     excerpt:
       "Accessibility isn't just ethical—it's profitable. We examine how inclusive design expands market reach and improves experiences for all users.",
     category: "Design",
-    author: "Alexandra Chen",
+    author: "N R SHAGOR",
     date: "February 8, 2026",
     readTime: "6 min read",
     image: "linear-gradient(135deg, #0D0D0D 0%, #1a3a2a 50%, #0f4d2d 100%)",

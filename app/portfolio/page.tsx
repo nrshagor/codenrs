@@ -9,106 +9,58 @@ const categories = [
   "All",
   "Web Development",
   "Creative Design",
-  "SEO",
-  "Data & Analytics",
+  "E-Commerce",
+  "PropTech",
 ]
 
 const projects = [
   {
     id: 1,
-    title: "Quantum Finance Platform",
+    title: "Qbits Technology",
     category: "Web Development",
     description:
-      "A comprehensive fintech platform revolutionizing investment management with real-time analytics and AI-powered insights.",
-    results: "+340% user engagement",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "AWS"],
-    image: "linear-gradient(135deg, #0D0D0D 0%, #1a1a2e 50%, #16213e 100%)",
-    href: "/portfolio/quantum-finance",
+      "A high-performance tech & computing solutions platform featuring next-gen laptops, mini PCs, and smart hardware with custom e-commerce architecture.",
+    results: "Global Hardware & Tech Brand",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js"],
+    image: "linear-gradient(135deg, #021a28 0%, #032A46 50%, #0a3d62 100%)",
+    href: "https://qbits.com/",
     featured: true,
   },
   {
     id: 2,
-    title: "Nova Brand Identity",
+    title: "Holistic Business Solutions",
     category: "Creative Design",
     description:
-      "Complete brand overhaul including visual identity, motion design language, and comprehensive design system.",
-    results: "2x brand recognition",
-    technologies: ["Figma", "After Effects", "Cinema 4D"],
-    image: "linear-gradient(135deg, #0D0D0D 0%, #1a2a1a 50%, #0f3d0f 100%)",
-    href: "/portfolio/nova-brand",
+      "Comprehensive digital agency platform offering full-cycle brand design, digital transformation strategy, and scalable enterprise web experiences.",
+    results: "500+ Delivered & 98% CSAT",
+    technologies: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript", "UI/UX"],
+    image: "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #2563eb 100%)",
+    href: "https://www.holisticbusinessservice.com/",
     featured: true,
   },
   {
     id: 3,
-    title: "CloudScale SEO Campaign",
-    category: "SEO",
+    title: "MatchMyTees",
+    category: "E-Commerce",
     description:
-      "Strategic SEO transformation that propelled a B2B SaaS company from page 5 to position 1 for 50+ keywords.",
-    results: "+892% organic traffic",
-    technologies: ["SEMrush", "Ahrefs", "Google Analytics"],
-    image: "linear-gradient(135deg, #0D0D0D 0%, #2a1a2a 50%, #3d0f3d 100%)",
-    href: "/portfolio/cloudscale-seo",
+      "High-traffic streetwear and sneaker-matching apparel e-commerce platform offering custom apparel coordination for iconic footwear brands.",
+    results: "+240% Sales Conversion",
+    technologies: ["Next.js", "React", "REST API", "Tailwind CSS", "Payment Gateway"],
+    image: "linear-gradient(135deg, #18181b 0%, #27272a 50%, #ea580c 100%)",
+    href: "https://www.matchmytees.com/",
     featured: true,
   },
   {
     id: 4,
-    title: "DataViz Dashboard Suite",
-    category: "Data & Analytics",
+    title: "XeTRoo PropTech",
+    category: "PropTech",
     description:
-      "Custom analytics platform providing real-time insights across multiple data sources with predictive modeling.",
-    results: "35% efficiency gains",
-    technologies: ["React", "D3.js", "Python", "BigQuery"],
-    image: "linear-gradient(135deg, #0D0D0D 0%, #2a2a1a 50%, #3d3d0f 100%)",
-    href: "/portfolio/dataviz-dashboard",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Nexus E-commerce Platform",
-    category: "Web Development",
-    description:
-      "High-performance e-commerce solution handling 100K+ daily transactions with seamless checkout experience.",
-    results: "+156% conversion rate",
-    technologies: ["Next.js", "Stripe", "Shopify API", "Redis"],
-    image: "linear-gradient(135deg, #0D0D0D 0%, #1a1a3a 50%, #0f0f4d 100%)",
-    href: "/portfolio/nexus-ecommerce",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Pulse Health App",
-    category: "Creative Design",
-    description:
-      "Mobile health application design with focus on accessibility and user engagement for wellness tracking.",
-    results: "4.9 App Store rating",
-    technologies: ["Figma", "Principle", "Lottie"],
-    image: "linear-gradient(135deg, #0D0D0D 0%, #3a1a1a 50%, #4d0f0f 100%)",
-    href: "/portfolio/pulse-health",
-    featured: false,
-  },
-  {
-    id: 7,
-    title: "TechStartup SEO Overhaul",
-    category: "SEO",
-    description:
-      "Complete technical and content SEO restructuring for a SaaS startup entering competitive market.",
-    results: "First page for 100+ keywords",
-    technologies: ["Screaming Frog", "Clearscope", "Google Search Console"],
-    image: "linear-gradient(135deg, #0D0D0D 0%, #1a3a2a 50%, #0f4d2d 100%)",
-    href: "/portfolio/techstartup-seo",
-    featured: false,
-  },
-  {
-    id: 8,
-    title: "Enterprise BI Platform",
-    category: "Data & Analytics",
-    description:
-      "Business intelligence solution consolidating data from 15+ sources for Fortune 500 retail company.",
-    results: "$2M annual savings",
-    technologies: ["Tableau", "Snowflake", "dbt", "Airflow"],
-    image: "linear-gradient(135deg, #0D0D0D 0%, #3a3a1a 50%, #4d4d0f 100%)",
-    href: "/portfolio/enterprise-bi",
-    featured: false,
+      "Innovative PropTech platform transforming real estate with smart property solutions, digital asset workflows, and next-generation perspective.",
+    results: "Leading PropTech Innovation",
+    technologies: ["WordPress", "Next.js", "PHP", "Tailwind CSS", "REST API"],
+    image: "linear-gradient(135deg, #140609 0%, #2a0b12 50%, #DD183B 100%)",
+    href: "https://www.xetrooproptech.ltd/",
+    featured: true,
   },
 ]
 
@@ -195,7 +147,11 @@ export default function PortfolioPage() {
                     project.featured ? "md:col-span-2 lg:col-span-1" : ""
                   }`}
                 >
-                  <Link href={project.href}>
+                  <Link
+                    href={project.href}
+                    target={project.href.startsWith("http") ? "_blank" : undefined}
+                    rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  >
                     <div className="relative h-full rounded-2xl overflow-hidden bg-card border border-border hover:border-[#00F5D4]/30 transition-all duration-500">
                       {/* Image Area */}
                       <div
