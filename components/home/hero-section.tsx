@@ -12,10 +12,18 @@ export function HeroSection() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    // Skip the animated background on mobile and for users who prefer
+    // reduced motion — it's decorative only and costs real CPU time.
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (window.innerWidth < 768 || prefersReducedMotion) return;
+
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     let animationId: number;
+    let idleHandle: number;
     const particles: Array<{
       x: number;
       y: number;
@@ -31,7 +39,10 @@ export function HeroSection() {
     };
 
     const createParticles = () => {
-      const particleCount = Math.floor((canvas.width * canvas.height) / 15000);
+      const particleCount = Math.min(
+        80,
+        Math.floor((canvas.width * canvas.height) / 30000)
+      );
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
@@ -47,7 +58,7 @@ export function HeroSection() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      particles.forEach((particle) => {
+      for (const particle of particles) {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
@@ -58,11 +69,13 @@ export function HeroSection() {
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(0, 210, 255, ${particle.opacity})`;
         ctx.fill();
-      });
+      }
 
-      // Draw connections
-      particles.forEach((p1, i) => {
-        particles.slice(i + 1).forEach((p2) => {
+      // Draw connections (index-based loop avoids per-frame array copies)
+      for (let i = 0; i < particles.length; i++) {
+        const p1 = particles[i];
+        for (let j = i + 1; j < particles.length; j++) {
+          const p2 = particles[j];
           const dx = p1.x - p2.x;
           const dy = p1.y - p2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -75,21 +88,35 @@ export function HeroSection() {
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
-        });
-      });
+        }
+      }
 
       animationId = requestAnimationFrame(animate);
     };
 
     resize();
-    createParticles();
-    animate();
-
     window.addEventListener("resize", resize);
+
+    // Defer starting the animation so it doesn't compete with hydration
+    // and initial paint for main-thread time.
+    const start = () => {
+      createParticles();
+      animate();
+    };
+    if ("requestIdleCallback" in window) {
+      idleHandle = window.requestIdleCallback(start, { timeout: 1500 });
+    } else {
+      idleHandle = window.setTimeout(start, 200) as unknown as number;
+    }
 
     return () => {
       window.removeEventListener("resize", resize);
       cancelAnimationFrame(animationId);
+      if ("cancelIdleCallback" in window) {
+        window.cancelIdleCallback(idleHandle);
+      } else {
+        clearTimeout(idleHandle);
+      }
     };
   }, []);
 
@@ -123,12 +150,7 @@ export function HeroSection() {
           </motion.div> */}
 
           {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
-          >
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
             <span className="block">We Build Digital</span>
             <span className="block mt-2">
               Experiences That{" "}
@@ -143,19 +165,14 @@ export function HeroSection() {
                 />
               </span>
             </span>
-          </motion.h1>
+          </h1>
 
           {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
-          >
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
             CODENRS is a digital agency specializing in Next.js web
             development, SaaS product engineering, creative design, and
             data-driven SEO strategies that propel brands into the future.
-          </motion.p>
+          </p>
 
           {/* CTAs */}
           <motion.div
@@ -196,7 +213,7 @@ export function HeroSection() {
             {[
               { value: `${new Date().getFullYear() - 2020}+`, label: "Years of Experience" },
               { value: "3", label: "Proprietary SaaS Products" },
-              { value: "Founder-Led", label: "Full-Stack Delivery" },
+              { value: "100%", label: "Founder-Led Delivery" },
               { value: "24h", label: "Avg. Response Time" },
             ].map((stat, index) => (
               <motion.div

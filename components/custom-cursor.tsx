@@ -23,6 +23,9 @@ export function CustomCursor() {
   const handleMouseEnter = useCallback(() => setIsVisible(true), [])
   const handleMouseLeave = useCallback(() => setIsVisible(false), [])
 
+  const INTERACTIVE_SELECTOR =
+    'a, button, [role="button"], input, textarea, select, [data-interactive]'
+
   useEffect(() => {
     // Only enable custom cursor on desktop
     if (typeof window !== 'undefined' && window.innerWidth < 1024) {
@@ -33,43 +36,28 @@ export function CustomCursor() {
     document.addEventListener("mouseenter", handleMouseEnter)
     document.addEventListener("mouseleave", handleMouseLeave)
 
-    // Track hover states for interactive elements
-    const interactiveElements = document.querySelectorAll(
-      'a, button, [role="button"], input, textarea, select, [data-interactive]'
-    )
+    // Delegate hover tracking through bubbling mouseover/mouseout on the
+    // document instead of a MutationObserver + per-element listeners —
+    // that approach re-scanned the whole DOM on every hydration mutation
+    // and was a major source of main-thread blocking time.
+    const handlePointerOver = (e: MouseEvent) => {
+      const target = e.target as Element | null
+      if (target?.closest(INTERACTIVE_SELECTOR)) setIsHovering(true)
+    }
+    const handlePointerOut = (e: MouseEvent) => {
+      const related = e.relatedTarget as Element | null
+      if (!related?.closest(INTERACTIVE_SELECTOR)) setIsHovering(false)
+    }
 
-    const handleInteractiveEnter = () => setIsHovering(true)
-    const handleInteractiveLeave = () => setIsHovering(false)
-
-    interactiveElements.forEach((el) => {
-      el.addEventListener("mouseenter", handleInteractiveEnter)
-      el.addEventListener("mouseleave", handleInteractiveLeave)
-    })
-
-    // MutationObserver to handle dynamically added elements
-    const observer = new MutationObserver(() => {
-      const newInteractiveElements = document.querySelectorAll(
-        'a, button, [role="button"], input, textarea, select, [data-interactive]'
-      )
-      newInteractiveElements.forEach((el) => {
-        el.removeEventListener("mouseenter", handleInteractiveEnter)
-        el.removeEventListener("mouseleave", handleInteractiveLeave)
-        el.addEventListener("mouseenter", handleInteractiveEnter)
-        el.addEventListener("mouseleave", handleInteractiveLeave)
-      })
-    })
-
-    observer.observe(document.body, { childList: true, subtree: true })
+    document.addEventListener("mouseover", handlePointerOver)
+    document.addEventListener("mouseout", handlePointerOut)
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove)
       document.removeEventListener("mouseenter", handleMouseEnter)
       document.removeEventListener("mouseleave", handleMouseLeave)
-      interactiveElements.forEach((el) => {
-        el.removeEventListener("mouseenter", handleInteractiveEnter)
-        el.removeEventListener("mouseleave", handleInteractiveLeave)
-      })
-      observer.disconnect()
+      document.removeEventListener("mouseover", handlePointerOver)
+      document.removeEventListener("mouseout", handlePointerOut)
     }
   }, [handleMouseMove, handleMouseEnter, handleMouseLeave])
 
