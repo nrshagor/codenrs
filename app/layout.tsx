@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
+import { MotionProvider } from '@/components/motion-provider'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { CustomCursor } from '@/components/custom-cursor'
@@ -92,12 +93,14 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange={false}
         >
-          <CustomCursor />
-          <Navbar />
-          <main className="min-h-screen">
-            {children}
-          </main>
-          <Footer />
+          <MotionProvider>
+            <CustomCursor />
+            <Navbar />
+            <main className="min-h-screen">
+              {children}
+            </main>
+            <Footer />
+          </MotionProvider>
         </ThemeProvider>
         <Analytics />
       </body>

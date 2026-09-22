@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { ArrowRight, Quote, Linkedin, Globe } from "lucide-react"
 
 const values = [
@@ -74,7 +74,7 @@ export default function AboutPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -89,7 +89,7 @@ export default function AboutPage() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               CODENRS is a founder-led digital studio built on a singular obsession: building digital experiences that matter. What began as a solo pursuit of technical and creative excellence has grown into a trusted studio delivering full-stack web platforms and SaaS products for ambitious brands.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -97,7 +97,7 @@ export default function AboutPage() {
       <section className="py-24 lg:py-32 bg-card/50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -115,9 +115,9 @@ export default function AboutPage() {
                   Today, I work with startups disrupting industries and established businesses reinventing themselves. My approach remains the same: listen deeply, think strategically, execute flawlessly. Every project is an opportunity to demonstrate what's possible when craft meets ambition.
                 </p>
               </div>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -141,7 +141,7 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -149,7 +149,7 @@ export default function AboutPage() {
       {/* Values Section */}
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -165,9 +165,9 @@ export default function AboutPage() {
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               These aren&apos;t just words on a wall—they&apos;re the standards we hold ourselves to on every project.
             </p>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -175,7 +175,7 @@ export default function AboutPage() {
             className="grid md:grid-cols-2 gap-6"
           >
             {values.map((value, index) => (
-              <motion.div
+              <m.div
                 key={value.title}
                 variants={itemVariants}
                 className="p-8 rounded-2xl bg-card border border-border hover:border-[#00D2FF]/30 transition-colors group"
@@ -191,16 +191,16 @@ export default function AboutPage() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Team Section */}
       <section className="py-24 lg:py-32 bg-card/50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -216,9 +216,9 @@ export default function AboutPage() {
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Visionary leadership driving digital innovation, technical excellence, and transformative client success.
             </p>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -226,7 +226,7 @@ export default function AboutPage() {
             className="flex justify-center"
           >
             {team.map((member) => (
-              <motion.div
+              <m.div
                 key={member.name}
                 variants={itemVariants}
                 className="group w-full max-w-md"
@@ -273,16 +273,16 @@ export default function AboutPage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Timeline Section */}
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -295,9 +295,9 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-5xl font-bold">
               Milestones Along the Way
             </h2>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -309,7 +309,7 @@ export default function AboutPage() {
 
             <div className="flex flex-col gap-8">
               {milestones.map((milestone, index) => (
-                <motion.div
+                <m.div
                   key={milestone.year}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -335,17 +335,17 @@ export default function AboutPage() {
                   </div>
                   <div className="hidden md:flex w-4 h-4 rounded-full bg-[#00D2FF] shadow-[0_0_10px_rgba(0,210,255,0.5)]" />
                   <div className="hidden md:block md:w-1/2" />
-                </motion.div>
+                </m.div>
               ))}
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-24 lg:py-32 bg-gradient-to-b from-background to-[#00D2FF]/5">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -359,26 +359,26 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact">
-                <motion.button
+                <m.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300"
                 >
                   Start a Project
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
+                </m.button>
               </Link>
               <Link href="/portfolio">
-                <motion.button
+                <m.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="inline-flex items-center gap-2 px-8 py-4 border border-border hover:border-[#00D2FF]/50 rounded-full transition-all duration-300"
                 >
                   Explore Our Work
-                </motion.button>
+                </m.button>
               </Link>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
     </div>

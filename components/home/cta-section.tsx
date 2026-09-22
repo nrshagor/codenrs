@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { ArrowRight, Sparkles } from "lucide-react"
 
 export function CTASection() {
@@ -12,14 +12,14 @@ export function CTASection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00D2FF]/10 rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           {/* Icon */}
-          <motion.div
+          <m.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -27,7 +27,7 @@ export function CTASection() {
             className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#00D2FF]/10 mb-8"
           >
             <Sparkles className="w-8 h-8 text-[#00D2FF]" />
-          </motion.div>
+          </m.div>
 
           {/* Headline */}
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
@@ -45,28 +45,28 @@ export function CTASection() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact">
-              <motion.button
+              <m.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_30px_rgba(0,210,255,0.4)] transition-all duration-300"
               >
                 Schedule a Call
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+              </m.button>
             </Link>
             <Link href="/portfolio">
-              <motion.button
+              <m.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center gap-2 px-8 py-4 border border-border hover:border-[#00D2FF]/50 rounded-full transition-all duration-300"
               >
                 Explore Our Work
-              </motion.button>
+              </m.button>
             </Link>
           </div>
 
           {/* Trust Badges */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -85,8 +85,8 @@ export function CTASection() {
               <span className="w-2 h-2 rounded-full bg-[#00D2FF]" />
               No Commitment
             </span>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </div>
     </section>
   )

@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
 
 const caseStudies = [
@@ -52,7 +52,7 @@ export function CaseStudiesSection() {
     <section className="py-24 lg:py-32 bg-card/50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -74,12 +74,12 @@ export function CaseStudiesSection() {
             View All Projects
             <ArrowUpRight className="w-4 h-4" />
           </Link>
-        </motion.div>
+        </m.div>
 
         {/* Case Studies Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {caseStudies.map((study, index) => (
-            <motion.div
+            <m.div
               key={study.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ export function CaseStudiesSection() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

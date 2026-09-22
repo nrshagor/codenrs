@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { ArrowUpRight, Clock, Calendar } from "lucide-react"
 
 const featuredPost = {
@@ -111,7 +111,7 @@ export default function BlogPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -126,14 +126,14 @@ export default function BlogPage() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Thoughts on technology, design, strategy, and building digital products that make a difference. Written by practitioners, for practitioners.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Categories */}
       <section className="py-8 border-b border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -151,14 +151,14 @@ export default function BlogPage() {
                 {category}
               </button>
             ))}
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Featured Post */}
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -213,14 +213,14 @@ export default function BlogPage() {
                 </div>
               </div>
             </Link>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Posts Grid */}
       <section className="py-16 lg:py-24 bg-card/50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -230,11 +230,11 @@ export default function BlogPage() {
             <span className="text-sm text-muted-foreground">
               {posts.length} articles
             </span>
-          </motion.div>
+          </m.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post, index) => (
-              <motion.div
+              <m.div
                 key={post.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -282,32 +282,32 @@ export default function BlogPage() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
           {/* Load More */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <motion.button
+            <m.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 border border-border hover:border-[#00D2FF]/50 rounded-full font-medium transition-all duration-300"
             >
               Load More Articles
-            </motion.button>
-          </motion.div>
+            </m.button>
+          </m.div>
         </div>
       </section>
 
       {/* Newsletter CTA */}
       <section className="py-24 lg:py-32">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -326,20 +326,20 @@ export default function BlogPage() {
                 placeholder="Enter your email"
                 className="w-full px-6 py-4 rounded-full bg-card border border-border focus:border-[#00D2FF] focus:outline-none focus:ring-2 focus:ring-[#00D2FF]/20 transition-all"
               />
-              <motion.button
+              <m.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
                 className="w-full sm:w-auto px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300 whitespace-nowrap"
               >
                 Subscribe
-              </motion.button>
+              </m.button>
             </form>
 
             <p className="text-xs text-muted-foreground mt-4">
               By subscribing, you agree to our Privacy Policy.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
     </div>

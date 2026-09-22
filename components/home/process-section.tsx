@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { Lightbulb, PenTool, Code, Rocket } from "lucide-react"
 
 const steps = [
@@ -39,7 +39,7 @@ export function ProcessSection() {
     <section className="py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -55,7 +55,7 @@ export function ProcessSection() {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A proven methodology refined over hundreds of successful projects, ensuring consistent excellence and measurable results.
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Timeline */}
         <div className="relative">
@@ -65,7 +65,7 @@ export function ProcessSection() {
           {/* Steps */}
           <div className="flex flex-col gap-12 lg:gap-0">
             {steps.map((step, index) => (
-              <motion.div
+              <m.div
                 key={step.number}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -116,7 +116,7 @@ export function ProcessSection() {
 
                 {/* Spacer */}
                 <div className="hidden lg:block lg:w-1/2" />
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>

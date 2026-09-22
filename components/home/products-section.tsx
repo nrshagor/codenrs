@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import {
   ArrowUpRight,
   Smartphone,
@@ -80,7 +80,7 @@ export function ProductsSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -99,12 +99,12 @@ export function ProductsSection() {
               Beyond client solutions, we design, build, and deploy proprietary SaaS platforms, mobile apps, and enterprise marketplace extensions.
             </p>
           </div>
-        </motion.div>
+        </m.div>
 
         {/* Product Cards Grid */}
         <div className="grid lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
-            <motion.div
+            <m.div
               key={product.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -171,7 +171,7 @@ export function ProductsSection() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

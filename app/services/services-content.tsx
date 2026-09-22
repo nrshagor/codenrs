@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import {
   Code2,
   Palette,
@@ -211,7 +211,7 @@ export default function ServicesPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -226,7 +226,7 @@ export default function ServicesPage() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               From initial concept to ongoing optimization, we provide comprehensive digital services that transform businesses. Each solution is crafted with precision, powered by innovation, and designed for measurable impact.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -240,14 +240,14 @@ export default function ServicesPage() {
           }`}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <motion.div
+            <m.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
             >
               {/* Service Header */}
-              <motion.div variants={itemVariants} className="mb-16">
+              <m.div variants={itemVariants} className="mb-16">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#00D2FF]/10">
                     <service.icon className="w-8 h-8 text-[#00D2FF]" />
@@ -264,10 +264,10 @@ export default function ServicesPage() {
                 <p className="text-muted-foreground text-lg leading-relaxed max-w-4xl">
                   {service.description}
                 </p>
-              </motion.div>
+              </m.div>
 
               {/* Benefits Grid */}
-              <motion.div
+              <m.div
                 variants={itemVariants}
                 className="grid md:grid-cols-3 gap-6 mb-16"
               >
@@ -287,10 +287,10 @@ export default function ServicesPage() {
                     </p>
                   </div>
                 ))}
-              </motion.div>
+              </m.div>
 
               {/* Capabilities & Stats */}
-              <motion.div
+              <m.div
                 variants={itemVariants}
                 className="grid lg:grid-cols-2 gap-12"
               >
@@ -329,8 +329,8 @@ export default function ServicesPage() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
-            </motion.div>
+              </m.div>
+            </m.div>
           </div>
         </section>
       ))}
@@ -338,7 +338,7 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className="py-24 lg:py-32 bg-gradient-to-b from-background to-[#00D2FF]/5">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -351,16 +351,16 @@ export default function ServicesPage() {
               Let&apos;s discuss how our services can be tailored to your unique needs and objectives. Every great partnership starts with a conversation.
             </p>
             <Link href="/contact">
-              <motion.button
+              <m.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+              </m.button>
             </Link>
-          </motion.div>
+          </m.div>
         </div>
       </section>
     </div>

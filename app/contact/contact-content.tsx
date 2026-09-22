@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { motion } from "framer-motion"
+import { m } from "framer-motion"
 import { Mail, Clock, Send, Check, ArrowRight } from "lucide-react"
 
 const projectTypes = [
@@ -68,7 +68,7 @@ export default function ContactPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -83,7 +83,7 @@ export default function ContactPage() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Have a project in mind? We&apos;d love to hear about it. Fill out the form below and we&apos;ll get back to you within 24 hours.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -92,7 +92,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Contact Info */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -147,10 +147,10 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Contact Form */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -158,7 +158,7 @@ export default function ContactPage() {
               className="lg:col-span-3"
             >
               {isSubmitted ? (
-                <motion.div
+                <m.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="h-full flex flex-col items-center justify-center text-center p-8 rounded-2xl bg-card border border-[#00D2FF]/30"
@@ -170,7 +170,7 @@ export default function ContactPage() {
                   <p className="text-muted-foreground mb-8 max-w-md">
                     Thank you for reaching out. We&apos;ve received your message and will get back to you within 24 hours.
                   </p>
-                  <motion.button
+                  <m.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => {
@@ -186,8 +186,8 @@ export default function ContactPage() {
                   >
                     Send Another Message
                     <ArrowRight className="w-4 h-4" />
-                  </motion.button>
-                </motion.div>
+                  </m.button>
+                </m.div>
               ) : (
                 <form
                   onSubmit={handleSubmit}
@@ -283,7 +283,7 @@ export default function ContactPage() {
                   </div>
 
                   {/* Submit */}
-                  <motion.button
+                  <m.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     type="submit"
@@ -301,7 +301,7 @@ export default function ContactPage() {
                         <Send className="w-5 h-5" />
                       </>
                     )}
-                  </motion.button>
+                  </m.button>
 
                   <p className="text-xs text-muted-foreground text-center mt-4">
                     By submitting this form, you agree to our{" "}
@@ -312,7 +312,7 @@ export default function ContactPage() {
                   </p>
                 </form>
               )}
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -320,7 +320,7 @@ export default function ContactPage() {
       {/* FAQ Section */}
       <section className="py-24 lg:py-32 bg-card/50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -331,7 +331,7 @@ export default function ContactPage() {
             <p className="text-muted-foreground">
               Quick answers to questions you might have.
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="flex flex-col gap-4">
             {[
@@ -352,7 +352,7 @@ export default function ContactPage() {
                 a: "Yes! We offer various maintenance and support packages to ensure your digital products continue to perform optimally after launch.",
               },
             ].map((faq, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -364,7 +364,7 @@ export default function ContactPage() {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {faq.a}
                 </p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
