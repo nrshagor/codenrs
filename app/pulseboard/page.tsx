@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -9,6 +10,14 @@ import {
   CheckCircle2,
   Store,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "PulseBoard | Live Jira Dashboard & Workload Planner",
+  description:
+    "PulseBoard is an Atlassian Forge verified Jira app giving software teams live project health dashboards, workload balancing, and sprint delivery risk detection.",
+  alternates: { canonical: "/pulseboard" },
+};
+
 const marketplaceUrl =
   "https://marketplace.atlassian.com/apps/4157437872/pulseboard";
 const features = [

@@ -1,0 +1,386 @@
+"use client"
+
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { ArrowRight, Quote, Linkedin, Globe } from "lucide-react"
+
+const values = [
+  {
+    title: "Excellence Without Compromise",
+    description:
+      "We believe in doing things right, not just doing them fast. Every line of code, every pixel, every strategy is crafted with meticulous attention to quality.",
+  },
+  {
+    title: "Innovation as Standard",
+    description:
+      "We continuously push boundaries, exploring new technologies and methodologies to deliver solutions that don't just meet expectations—they redefine them.",
+  },
+  {
+    title: "Partnership, Not Service",
+    description:
+      "We invest in understanding your business as deeply as you do. Your success is our success, and we operate as an extension of your team.",
+  },
+  {
+    title: "Transparency Always",
+    description:
+      "Clear communication, honest feedback, and open collaboration form the foundation of every relationship we build.",
+  },
+]
+
+const team = [
+  {
+    name: "N R SHAGOR",
+    role: "Founder & CEO",
+    bio: "Passionate technologist, full-stack engineer, and digital strategist dedicated to crafting impactful digital ecosystems, scalable architectures, and next-generation web experiences.",
+    image: "linear-gradient(135deg, #021a28 0%, #032A46 50%, #0a3d62 100%)",
+    linkedin: "https://www.linkedin.com/in/nrshagor/",
+    website: "https://nrshagor.com/",
+  },
+]
+
+const milestones = [
+  { year: "2020", event: "Founded CODENRS with a vision for digital excellence" },
+  { year: "2021", event: "Delivered first set of enterprise platforms" },
+  { year: "2022", event: "Expanded full-stack & modern digital solutions" },
+  { year: "2023", event: "Delivered high-impact digital products for growing businesses" },
+  { year: "2024", event: "Scaled global client collaborations" },
+  { year: "2025", event: "Launched proprietary SaaS products: PulseBoard, RevivaIQ & PocketLens" },
+  { year: "2026", event: "Crafting next-generation digital ecosystems" },
+]
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15 },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+}
+
+export default function AboutPage() {
+  return (
+    <div className="pt-20">
+      {/* Hero Section */}
+      <section className="py-24 lg:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#00D2FF]/5 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl"
+          >
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
+              About CODENRS
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
+              Crafting Digital Excellence Since 2020
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              CODENRS is a founder-led digital studio built on a singular obsession: building digital experiences that matter. What began as a solo pursuit of technical and creative excellence has grown into a trusted studio delivering full-stack web platforms and SaaS products for ambitious brands.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Story Section */}
+      <section className="py-24 lg:py-32 bg-card/50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  CODENRS was born from a simple observation: too many agencies prioritize speed over substance, delivering work that looks good but fails to perform. We set out to build something different—a studio where technical excellence and creative vision would be equally valued.
+                </p>
+                <p>
+                  As a full-stack founder, I bring engineering, design, and strategy together under one roof. I believe the best digital experiences emerge when these disciplines are handled by someone who understands all three deeply—not handed off between siloed teams.
+                </p>
+                <p>
+                  Today, I work with startups disrupting industries and established businesses reinventing themselves. My approach remains the same: listen deeply, think strategically, execute flawlessly. Every project is an opportunity to demonstrate what's possible when craft meets ambition.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative p-8 rounded-2xl bg-card border border-border">
+                <Quote className="w-12 h-12 text-[#00D2FF]/20 mb-4" />
+                <blockquote className="text-xl font-medium mb-6 leading-relaxed">
+                  &quot;We don&apos;t just build websites—we craft digital ecosystems that drive measurable business outcomes. That distinction is what sets CODENRS apart.&quot;
+                </blockquote>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00D2FF]/20 to-[#00D2FF]/5 flex items-center justify-center font-bold text-[#00D2FF]">
+                    N
+                  </div>
+                  <div>
+                    <div className="font-semibold">N R SHAGOR</div>
+                    <div className="text-sm text-muted-foreground">
+                      Founder & CEO
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
+              Our Philosophy
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Principles That Guide Us
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              These aren&apos;t just words on a wall—they&apos;re the standards we hold ourselves to on every project.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 gap-6"
+          >
+            {values.map((value, index) => (
+              <motion.div
+                key={value.title}
+                variants={itemVariants}
+                className="p-8 rounded-2xl bg-card border border-border hover:border-[#00D2FF]/30 transition-colors group"
+              >
+                <div className="flex items-start gap-4">
+                  <span className="text-4xl font-bold text-[#00D2FF]/20">
+                    0{index + 1}
+                  </span>
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">{value.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-24 lg:py-32 bg-card/50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
+              Leadership
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Meet Our Founder
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Visionary leadership driving digital innovation, technical excellence, and transformative client success.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex justify-center"
+          >
+            {team.map((member) => (
+              <motion.div
+                key={member.name}
+                variants={itemVariants}
+                className="group w-full max-w-md"
+              >
+                <div className="rounded-2xl overflow-hidden bg-card border border-border hover:border-[#00D2FF]/30 transition-colors">
+                  {/* Image Placeholder */}
+                  <div
+                    className="h-64 relative"
+                    style={{ background: member.image }}
+                  >
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-7xl font-bold text-white/10">
+                        N
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="font-bold text-2xl mb-1">{member.name}</h3>
+                    <p className="text-[#00D2FF] text-sm font-medium mb-3">{member.role}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                      {member.bio}
+                    </p>
+                    <div className="flex items-center gap-3">
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary hover:bg-[#00D2FF]/10 text-muted-foreground hover:text-[#00D2FF] text-xs font-medium transition-colors"
+                      >
+                        <Linkedin className="w-4 h-4" />
+                        <span>LinkedIn</span>
+                      </a>
+                      <a
+                        href={member.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary hover:bg-[#00D2FF]/10 text-muted-foreground hover:text-[#00D2FF] text-xs font-medium transition-colors"
+                      >
+                        <Globe className="w-4 h-4" />
+                        <span>Portfolio</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <span className="text-sm font-medium text-[#00D2FF] uppercase tracking-widest mb-4 block">
+              Our Journey
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold">
+              Milestones Along the Way
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            {/* Timeline Line */}
+            <div className="absolute top-0 bottom-0 left-1/2 w-px bg-border hidden md:block" />
+
+            <div className="flex flex-col gap-8">
+              {milestones.map((milestone, index) => (
+                <motion.div
+                  key={milestone.year}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`flex items-center gap-8 ${
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
+                >
+                  <div
+                    className={`md:w-1/2 ${
+                      index % 2 === 0 ? "md:text-right" : "md:text-left"
+                    }`}
+                  >
+                    <div className="inline-block p-4 rounded-xl bg-card border border-border">
+                      <span className="text-2xl font-bold text-[#00D2FF]">
+                        {milestone.year}
+                      </span>
+                      <p className="text-muted-foreground mt-1">
+                        {milestone.event}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hidden md:flex w-4 h-4 rounded-full bg-[#00D2FF] shadow-[0_0_10px_rgba(0,210,255,0.5)]" />
+                  <div className="hidden md:block md:w-1/2" />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 lg:py-32 bg-gradient-to-b from-background to-[#00D2FF]/5">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-balance">
+              Join Us on the Journey
+            </h2>
+            <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
+              Whether you&apos;re looking to transform your digital presence or join our team, we&apos;d love to hear from you.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="/contact">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300"
+                >
+                  Start a Project
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </motion.button>
+              </Link>
+              <Link href="/portfolio">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-2 px-8 py-4 border border-border hover:border-[#00D2FF]/50 rounded-full transition-all duration-300"
+                >
+                  Explore Our Work
+                </motion.button>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  )
+}

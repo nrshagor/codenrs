@@ -152,9 +152,9 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            CODENRS is an elite digital agency specializing in transformative
-            web development, creative design, and data-driven strategies that
-            propel brands into the future.
+            CODENRS is a digital agency specializing in Next.js web
+            development, SaaS product engineering, creative design, and
+            data-driven SEO strategies that propel brands into the future.
           </motion.p>
 
           {/* CTAs */}
@@ -194,10 +194,10 @@ export function HeroSection() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-border/50"
           >
             {[
-              { value: "150+", label: "Projects Delivered" },
-              { value: "50+", label: "Happy Clients" },
-              { value: "8+", label: "Years Experience" },
-              { value: "99%", label: "Client Satisfaction" },
+              { value: `${new Date().getFullYear() - 2020}+`, label: "Years of Experience" },
+              { value: "3", label: "Proprietary SaaS Products" },
+              { value: "Founder-Led", label: "Full-Stack Delivery" },
+              { value: "24h", label: "Avg. Response Time" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

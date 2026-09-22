@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -13,6 +14,13 @@ import {
   Camera,
   DatabaseZap,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "RevivaIQ | Dead Stock & Customer Churn Recovery for Odoo",
+  description:
+    "RevivaIQ is an enterprise Odoo ERP module that detects dead inventory, flags customer churn risk, and unlocks dormant revenue across your warehouse. Verified for Odoo 18.0.",
+  alternates: { canonical: "/revivaiq" },
+};
 
 const marketplaceUrl = "https://apps.odoo.com/apps/modules/18.0/revivaiq_base";
 

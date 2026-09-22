@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -10,6 +11,13 @@ import {
   Download,
   Coins,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "PocketLens | AI Personal Finance & Expense Tracking App",
+  description:
+    "PocketLens is an intelligent personal finance app with Gemini AI receipt scanning, natural Bangla/Banglish voice input, and real-time budget analytics.",
+  alternates: { canonical: "/pocket-lens" },
+};
 
 const features = [
   {
