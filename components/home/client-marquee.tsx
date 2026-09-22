@@ -1,6 +1,6 @@
 "use client"
 
-import { m } from "framer-motion"
+import { motion } from "framer-motion"
 
 const clients = [
   { name: "Qbits Technology", url: "https://qbits.com/" },
@@ -13,14 +13,14 @@ export function ClientMarquee() {
   return (
     <section className="py-16 border-y border-border/50 overflow-hidden bg-card/50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8">
-        <m.p
+        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="text-center text-sm text-muted-foreground uppercase tracking-widest"
         >
           Trusted by innovative companies worldwide
-        </m.p>
+        </motion.p>
       </div>
 
       <div className="relative w-full overflow-hidden">

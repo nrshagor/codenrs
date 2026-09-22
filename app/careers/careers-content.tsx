@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { m } from "framer-motion"
+import { motion } from "framer-motion"
 import { Mail, ArrowRight, Briefcase } from "lucide-react"
 
 export default function CareersPage() {
@@ -12,7 +12,7 @@ export default function CareersPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <m.div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -58,7 +58,7 @@ export default function CareersPage() {
                 </button>
               </Link>
             </div>
-          </m.div>
+          </motion.div>
         </div>
       </section>
     </div>

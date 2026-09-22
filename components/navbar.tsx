@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { m, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
@@ -37,7 +37,7 @@ export function Navbar() {
   }, [pathname]);
 
   return (
-    <m.header
+    <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -51,12 +51,12 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo: Icon + Styled Wordmark */}
           <Link href="/" className="group flex items-center">
-            <m.div
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <BrandLogo iconSize={30} imageHeight="h-5.5 md:h-6" />
-            </m.div>
+            </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -72,7 +72,7 @@ export function Navbar() {
                 >
                   {link.label}
                 </span>
-                <m.div
+                <motion.div
                   className="absolute -bottom-1 left-0 h-0.5 bg-[#00D2FF]"
                   initial={{ width: pathname === link.href ? "100%" : 0 }}
                   animate={{ width: pathname === link.href ? "100%" : 0 }}
@@ -87,7 +87,7 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             {/* Theme Toggle */}
             {mounted && (
-              <m.button
+              <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -96,7 +96,7 @@ export function Navbar() {
               >
                 <AnimatePresence mode="wait">
                   {theme === "dark" ? (
-                    <m.div
+                    <motion.div
                       key="sun"
                       initial={{ rotate: -90, opacity: 0 }}
                       animate={{ rotate: 0, opacity: 1 }}
@@ -104,9 +104,9 @@ export function Navbar() {
                       transition={{ duration: 0.2 }}
                     >
                       <Sun className="w-5 h-5 text-[#00D2FF]" />
-                    </m.div>
+                    </motion.div>
                   ) : (
-                    <m.div
+                    <motion.div
                       key="moon"
                       initial={{ rotate: 90, opacity: 0 }}
                       animate={{ rotate: 0, opacity: 1 }}
@@ -114,25 +114,25 @@ export function Navbar() {
                       transition={{ duration: 0.2 }}
                     >
                       <Moon className="w-5 h-5 text-foreground" />
-                    </m.div>
+                    </motion.div>
                   )}
                 </AnimatePresence>
-              </m.button>
+              </motion.button>
             )}
 
             {/* CTA Button - Desktop */}
             <Link href="/contact" className="hidden lg:block">
-              <m.button
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-2.5 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_20px_rgba(0,210,255,0.4)] transition-all duration-300"
               >
                 Start Project
-              </m.button>
+              </motion.button>
             </Link>
 
             {/* Mobile Menu Button */}
-            <m.button
+            <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
@@ -143,7 +143,7 @@ export function Navbar() {
               ) : (
                 <Menu className="w-6 h-6" />
               )}
-            </m.button>
+            </motion.button>
           </div>
         </div>
       </nav>
@@ -151,7 +151,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
-          <m.div
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -160,7 +160,7 @@ export function Navbar() {
           >
             <div className="px-6 py-6 flex flex-col gap-4">
               {navLinks.map((link, index) => (
-                <m.div
+                <motion.div
                   key={link.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -176,9 +176,9 @@ export function Navbar() {
                   >
                     {link.label}
                   </Link>
-                </m.div>
+                </motion.div>
               ))}
-              <m.div
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navLinks.length * 0.1 }}
@@ -189,11 +189,11 @@ export function Navbar() {
                 >
                   Start Project
                 </Link>
-              </m.div>
+              </motion.div>
             </div>
-          </m.div>
+          </motion.div>
         )}
       </AnimatePresence>
-    </m.header>
+    </motion.header>
   );
 }

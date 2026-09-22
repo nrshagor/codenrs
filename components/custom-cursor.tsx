@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState, useCallback } from "react"
-import { m, useSpring, useMotionValue } from "framer-motion"
+import { motion, useSpring, useMotionValue } from "framer-motion"
 
 export function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false)
@@ -69,14 +69,14 @@ export function CustomCursor() {
   return (
     <>
       {/* Outer ring - follows with lag */}
-      <m.div
+      <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999] hidden lg:block"
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
         }}
       >
-        <m.div
+        <motion.div
           className="relative -translate-x-1/2 -translate-y-1/2"
           animate={{
             scale: isHovering ? 1.4 : 1,
@@ -92,18 +92,18 @@ export function CustomCursor() {
                 : '0 0 10px rgba(0, 210, 255, 0.25)'
             }}
           />
-        </m.div>
-      </m.div>
+        </motion.div>
+      </motion.div>
       
       {/* Inner dot - direct follow */}
-      <m.div
+      <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999] hidden lg:block"
         style={{
           x: cursorX,
           y: cursorY,
         }}
       >
-        <m.div
+        <motion.div
           className="relative -translate-x-1/2 -translate-y-1/2"
           animate={{
             scale: isHovering ? 0.5 : 1,
@@ -117,8 +117,8 @@ export function CustomCursor() {
               boxShadow: '0 0 12px rgba(0, 210, 255, 0.85)'
             }}
           />
-        </m.div>
-      </m.div>
+        </motion.div>
+      </motion.div>
     </>
   )
 }

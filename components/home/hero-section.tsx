@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { m } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 
 export function HeroSection() {
@@ -137,7 +137,7 @@ export function HeroSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
         <div className="text-center">
           {/* Badge */}
-          {/* <m.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -147,7 +147,7 @@ export function HeroSection() {
             <span className="text-sm font-medium dark:text-[#00F5D4] text-[#007568]">
               Now accepting new projects for Q2 2026
             </span>
-          </m.div> */}
+          </motion.div> */}
 
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
@@ -158,7 +158,7 @@ export function HeroSection() {
                 <span className="relative z-10 text-[#00D2FF]">
                   Matter
                 </span>
-                <m.span
+                <motion.span
                   className="absolute inset-0 bg-[#00D2FF]/20 blur-2xl"
                   animate={{ opacity: [0.5, 0.8, 0.5] }}
                   transition={{ duration: 2, repeat: Infinity }}
@@ -175,36 +175,36 @@ export function HeroSection() {
           </p>
 
           {/* CTAs */}
-          <m.div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Link href="/contact">
-              <m.button
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_30px_rgba(0,210,255,0.4)] transition-all duration-300"
               >
                 Start Your Project
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </m.button>
+              </motion.button>
             </Link>
             <Link href="/portfolio">
-              <m.button
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group inline-flex items-center gap-2 px-8 py-4 border border-border hover:border-[#00D2FF]/50 rounded-full transition-all duration-300"
               >
                 <Play className="w-5 h-5 text-[#00D2FF]" />
                 View Our Work
-              </m.button>
+              </motion.button>
             </Link>
-          </m.div>
+          </motion.div>
 
           {/* Stats */}
-          <m.div
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -216,7 +216,7 @@ export function HeroSection() {
               { value: "100%", label: "Founder-Led Delivery" },
               { value: "24h", label: "Avg. Response Time" },
             ].map((stat, index) => (
-              <m.div
+              <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -229,27 +229,27 @@ export function HeroSection() {
                 <div className="text-sm text-muted-foreground">
                   {stat.label}
                 </div>
-              </m.div>
+              </motion.div>
             ))}
-          </m.div>
+          </motion.div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <m.div
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <m.div
+        <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
           className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2"
         >
-          <m.div className="w-1.5 h-1.5 rounded-full bg-[#00D2FF]" />
-        </m.div>
-      </m.div>
+          <motion.div className="w-1.5 h-1.5 rounded-full bg-[#00D2FF]" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { m, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { ArrowUpRight, ExternalLink } from "lucide-react"
 
 const categories = [
@@ -80,7 +80,7 @@ export default function PortfolioPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00D2FF]/5 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <m.div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -95,14 +95,14 @@ export default function PortfolioPage() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               A curated selection of our most impactful work. Each project represents a unique challenge met with innovative solutions and measurable results.
             </p>
-          </m.div>
+          </motion.div>
         </div>
       </section>
 
       {/* Filter Section */}
       <section className="py-8 border-b border-border sticky top-20 bg-background/80 backdrop-blur-xl z-30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <m.div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -121,7 +121,7 @@ export default function PortfolioPage() {
                 {category}
               </button>
             ))}
-          </m.div>
+          </motion.div>
         </div>
       </section>
 
@@ -129,7 +129,7 @@ export default function PortfolioPage() {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <AnimatePresence mode="wait">
-            <m.div
+            <motion.div
               key={activeCategory}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -138,7 +138,7 @@ export default function PortfolioPage() {
               className="grid md:grid-cols-2 gap-6"
             >
               {filteredProjects.map((project, index) => (
-                <m.div
+                <motion.div
                   key={project.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -226,13 +226,13 @@ export default function PortfolioPage() {
                       </div>
                     </div>
                   </Link>
-                </m.div>
+                </motion.div>
               ))}
-            </m.div>
+            </motion.div>
           </AnimatePresence>
 
           {filteredProjects.length === 0 && (
-            <m.div
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-16"
@@ -240,7 +240,7 @@ export default function PortfolioPage() {
               <p className="text-muted-foreground text-lg">
                 No projects found in this category.
               </p>
-            </m.div>
+            </motion.div>
           )}
         </div>
       </section>
@@ -248,7 +248,7 @@ export default function PortfolioPage() {
       {/* CTA Section */}
       <section className="py-24 lg:py-32 bg-card/50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <m.div
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -261,16 +261,16 @@ export default function PortfolioPage() {
               Ready to create something extraordinary? Let&apos;s discuss how we can bring your vision to life with the same level of excellence.
             </p>
             <Link href="/contact">
-              <m.button
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300"
               >
                 Start Your Project
                 <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </m.button>
+              </motion.button>
             </Link>
-          </m.div>
+          </motion.div>
         </div>
       </section>
     </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { m } from "framer-motion"
+import { motion } from "framer-motion"
 import { Code2, Palette, Search, BarChart3, ArrowUpRight } from "lucide-react"
 
 const services = [
@@ -86,7 +86,7 @@ export function ServicesSection() {
     <section className="py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <m.div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -102,10 +102,10 @@ export function ServicesSection() {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             From concept to launch, we deliver end-to-end digital services that drive growth and establish market leadership.
           </p>
-        </m.div>
+        </motion.div>
 
         {/* Services Grid */}
-        <m.div
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -113,7 +113,7 @@ export function ServicesSection() {
           className="grid md:grid-cols-2 gap-6"
         >
           {services.map((service) => (
-            <m.div
+            <motion.div
               key={service.title}
               variants={itemVariants}
               className="group relative"
@@ -157,12 +157,12 @@ export function ServicesSection() {
                   </div>
                 </div>
               </Link>
-            </m.div>
+            </motion.div>
           ))}
-        </m.div>
+        </motion.div>
 
         {/* View All Link */}
-        <m.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -176,7 +176,7 @@ export function ServicesSection() {
             Explore All Services
             <ArrowUpRight className="w-4 h-4" />
           </Link>
-        </m.div>
+        </motion.div>
       </div>
     </section>
   )

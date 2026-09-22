@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { m } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 
@@ -37,7 +37,7 @@ export function Footer() {
     <footer className="relative bg-card border-t border-border">
       {/* Top CTA Section */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
-        <m.div
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -53,21 +53,21 @@ export function Footer() {
             ready to bring your vision to life.
           </p>
           <Link href="/contact">
-            <m.button
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#00D2FF] text-[#0D0D0D] font-semibold rounded-full hover:shadow-[0_0_25px_rgba(0,210,255,0.4)] transition-all duration-300"
             >
               Start Your Project
               <ArrowUpRight className="w-5 h-5" />
-            </m.button>
+            </motion.button>
           </Link>
-        </m.div>
+        </motion.div>
 
         {/* Links Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Brand Column */}
-          <m.div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -90,10 +90,10 @@ export function Footer() {
                 support@codenrs.com
               </a>
             </div>
-          </m.div>
+          </motion.div>
 
           {/* Products Column */}
-          <m.div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -113,10 +113,10 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </m.div>
+          </motion.div>
 
           {/* Services Column */}
-          <m.div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -135,10 +135,10 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </m.div>
+          </motion.div>
 
           {/* Company Column */}
-          <m.div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -157,10 +157,10 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </m.div>
+          </motion.div>
 
           {/* Social Column */}
-          <m.div
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -182,7 +182,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </m.div>
+          </motion.div>
         </div>
       </div>
 
